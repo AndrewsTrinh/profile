@@ -1,0 +1,209 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{skillicons}
+
+% Define colors matching the PDF
+\definecolor{headerblue}{RGB}{13,35,58}
+\definecolor{sectionline}{RGB}{13,35,58}
+
+% Define custom mdframed style for dashed left border
+\mdfdefinestyle{dashedleft}{
+  hidealllines=true,
+  leftline=true,
+  linecolor=sectionline,
+  linewidth=2pt,
+  tikzsetting={draw=sectionline, line width=2pt, dashed, dash pattern=on 4pt off 2pt},
+  innerleftmargin=10pt,
+  innerrightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt,
+  skipabove=0pt,
+  skipbelow=0pt
+}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,leftmargin=0em}
+
+% Custom section command with horizontal line
+\newcommand{\linesection}[1]{%
+  \vspace{10pt}%
+  \noindent{\color{headerblue}\large\bfseries #1}\hspace{0.5em}{\color{sectionline}\leavevmode\leaders\hrule height 1.5pt\hfill\kern0pt}%
+  \par\vspace{8pt}%
+}
+
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% Environment for section content with left border
+\newenvironment{sectioncontent}
+  {\par\vspace{4pt}\leftskip=8pt\relax
+   \def\item{\par\hangindent=1.5em\hangafter=1\textbullet\hspace{0.5em}}}
+  {\par\vspace{4pt}}
+
+\begin{document}
+
+%==================== HEADER ====================%
+\pagecolor{white}
+\noindent\begin{minipage}{\textwidth}
+\vspace{10pt}
+\color{black}
+\raggedright
+{\fontsize{28}{32}\selectfont\textbf{QUOC ANH TRINH (ANDREW)}}\\[6pt]
+{\normalsize\textit{Data Scientist | M.Sc in Business Analytics, Deakin University}}\\[4pt]
+{\normalsize \includegraphics[height=1.2em]{logos/sql.png} \includegraphics[height=1.2em]{logos/python.png} \includegraphics[height=1.2em]{logos/r.png} \includegraphics[height=1.2em]{logos/excel.png} \includegraphics[height=1.2em]{logos/powerbi.png} \includegraphics[height=1.2em]{logos/tableau.png} \includegraphics[height=1.2em]{logos/aws.png} \includegraphics[height=1.2em]{logos/gcp.png} \includegraphics[height=1.2em]{logos/spark.png}}\\[4pt]
+{\normalsize\faPhone\ : +61 451 886 468 \quad|\quad \faEnvelope\ : andrews.trinh@gmail.com \quad|\quad \faLinkedin\ : \href{https://www.linkedin.com/in/qatrinh/}{qatrinh}}
+\vspace{10pt}
+\end{minipage}%
+
+\vspace{8pt}
+
+\vspace{6pt}
+
+%==================== PROFESSIONAL SUMMARY ====================%
+\linesection{DATA SCIENTIST}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Purpose‑driven Data Scientist with 5+ years of experience delivering end‑to‑end AI/ML solutions in FinTech and banking. Expertise in leveraging Generative AI, Large Language Models (LLMs), and traditional predictive modelling to drive data‑led decision‑making. Proven track record in automating complex regulatory workflows, optimizing transaction monitoring for institutions like Bendigo \& Adelaide Bank, and building scalable data products that translate technical complexity into measurable social and business impact.
+\end{itemize}
+\end{mdframed}
+
+\vspace{6pt}
+
+%==================== DATA SCIENCE & AI SKILLS ====================%
+\linesection{DATA SCIENCE \& AI EXPERTISE}
+
+\noindent\begin{minipage}{\textwidth}
+\hspace{2pt}\vrule width 2pt\hspace{15pt}%
+\begin{minipage}[t]{\textwidth-19pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}AI Innovation:}\\[0pt]
+\textit{(LLMs, NLP, Python)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Developed agentic AI architectures to extract and transform \textbf{156 AUSTRAC docs} into \textbf{198 actionable typologies} and \textbf{300+ indicators}\\
+\textbullet\ Co-designed automated \textbf{UAR-to-SMR pipeline} using LLMs and data masking, reducing regulatory report prep time by \textbf{80\%}\\
+\textbullet\ Fine-tuned predictive scenarios for high-stakes risk detection achieving \textbf{60-70\% true positive rates}
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Machine Learning:}\\[0pt]
+\textit{(Scikit-learn, Spark)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Calibrated transaction monitoring models using genetic algorithms and statistical trend modelling, achieving \textbf{67\% alert reduction}\\
+\textbullet\ Automated marketing via customer classification models driving \textbf{30\% CTR uplift}
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Infrastructure \& MLOps:}\\[0pt]
+\textit{(AWS, GCP, Git, Docker)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Optimized ETL pipelines in Redshift and AWS Glue, reducing cloud costs by \textbf{30\%} and dashboard runtime \textbf{70\%}\\
+\textbullet\ Engineered automated workflows processing \textbf{150+ alerts daily} with \textbf{99.9\% integrity} using CI/CD principles
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Analytics \& Insight:}\\[0pt]
+\textit{(SQL, PowerBI, R)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Engineered Power BI dashboards eliminating \textbf{70\% of ad-hoc requests}, reducing prioritization time by \textbf{60\%}\\
+\textbullet\ Tutored \textbf{100+ students} in SQL and Python, specializing in translating technical findings for non-technical audiences
+\end{minipage}
+
+\end{minipage}
+\end{minipage}
+
+\vspace{6pt}
+
+%==================== PROFESSIONAL EXPERIENCE ====================%
+\linesection{PROFESSIONAL EXPERIENCE}
+\begin{mdframed}[style=dashedleft]
+
+\subsection*{Analyst | Lead of Intelligence \& Analytics \hfill \textbf{Bendigo \& Adelaide Bank} \hfill 05/2021 - Present}
+\textit{Financial Crime Risk - Intelligence and Analytics}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{End-to-End AI Solutions:} Led the transformation of analytical capabilities using machine learning and NLP for exploratory analysis and predictive SMR-triggered alert sets.
+    \item \textbf{Generative AI Innovation:} Engineered an AI-driven typology management platform, applying advanced ETL to transform 156 national regulatory documents into actionable data assets.
+    \item \textbf{ML Modelling:} Built and fine-tuned transaction monitoring scenarios utilizing statistical confidence testing and statistical recalibration to save \textbf{300+ investigation hours annually}.
+    \item \textbf{Strategic Oversight:} Advised transformation and governance teams on dashboard design for alert prioritization and operational KPIs, enhancing data-led decision-making.
+\end{itemize}
+
+\textbf{KEY DATA SCIENCE ACHIEVEMENTS}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{AI reporting pipeline:} Co-designed the regulated UAR-to-SMR pipeline using Selenium, LLMs, and SQL data modelling, \textbf{automating report prep by 80\%}.
+    \item \textbf{Algorithm fine-tuning:} Leveraged genetic algorithms to achieve \textbf{60-70\% true positive rates} in critical risk scenarios while reducing alert volume by \textbf{67\%}.
+    \item \textbf{Data Asset Transformation:} Transformed AUSTRAC documents into \textbf{198 typologies} and \textbf{300+ indicators} using agentic AI, forming the baseline for modern, data-led monitoring.
+    \item \textbf{Scalable Architecture:} Engineered SQL-based replication of \textbf{40+ scenarios} for a major bank migration, achieving \textbf{100\% scenario alignment}.
+\end{itemize}
+
+\vspace{4pt}
+
+\subsection*{Data Analyst \hfill \textbf{Remitano} \hfill 03/2020 - 04/2021}
+\textit{International cryptocurrency exchange operating in 30+ countries.}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Predictive Analytics:} Built and automated marketing predictive models boosting click-through rates by \textbf{30\%}.
+    \item \textbf{ETL Optimization:} Slashed cloud costs by \textbf{30\%} and runtime by \textbf{70\%} through optimized ETL pipelines and data normalization in Redshift.
+    \item \textbf{Complex Modelling:} Engineered recursive SQL for MLM commission calculations on \textbf{150K+ relationships}, eliminating high-cost graph database dependencies.
+\end{itemize}
+
+\end{mdframed}
+
+\vspace{6pt}
+
+%==================== EDUCATION ====================%
+\linesection{EDUCATION}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Master of Business Analytics} -- Deakin University, 2019
+    \item \textbf{Bachelor of General Business Management} -- National Economics University, 2013
+\end{itemize}
+\end{mdframed}
+
+%==================== HONOURS & AWARDS ====================%
+\linesection{HONORS \& AWARDS}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Third place \& Honorable Mention - Project SafeAus - GovHack Australia, 09/2021
+    \item \#13 in public test and \#32 in private test - Pet finder Kaggle Competition, 2019
+    \item Won 2 Open Gov hackathon prizes for impactful data-driven solutions
+\end{itemize}
+\end{mdframed}
+
+%==================== VOLUNTEER & HOBBIES ====================%
+\linesection{VOLUNTEER ACTIVITIES \& HOBBIES}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Tutored 100+ students in SQL and Python, bridging technical and non-technical communication gaps.
+    \item Hobbies: Sports (Football), Building data-driven solutions for micro-businesses.
+\end{itemize}
+\end{mdframed}
+
+\end{document}
