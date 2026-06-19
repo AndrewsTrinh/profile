@@ -54,7 +54,7 @@ function Row({
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `repeating-linear-gradient(90deg, rgba(241,238,226,0.12) 0px, rgba(241,238,226,0.12) 1px, transparent 1px, transparent calc(100%/${RANGE}))`,
+            backgroundImage: `repeating-linear-gradient(90deg, rgba(10,10,10,0.14) 0px, rgba(10,10,10,0.14) 1px, transparent 1px, transparent calc(100%/${RANGE}))`,
           }}
         />
         <button

@@ -67,7 +67,7 @@ export default function ProjectThumb({ project }: { project: Project }) {
         background: 'var(--panel)',
         // low-opacity pixel-dot pattern
         backgroundImage:
-          'repeating-linear-gradient(0deg, rgba(241,238,226,0.06) 0 1px, transparent 1px 8px), repeating-linear-gradient(90deg, rgba(241,238,226,0.06) 0 1px, transparent 1px 8px)',
+          'repeating-linear-gradient(0deg, rgba(10,10,10,0.07) 0 1px, transparent 1px 8px), repeating-linear-gradient(90deg, rgba(10,10,10,0.07) 0 1px, transparent 1px 8px)',
         borderBottom: `3px solid ${accent}`,
       }}
       aria-hidden

@@ -29,7 +29,7 @@ function PixelBar({ years }: { years: number }) {
         <span
           key={i}
           className="pixel-cell"
-          style={{ background: i < years ? 'var(--gold)' : 'rgba(241,238,226,0.12)' }}
+          style={{ background: i < years ? 'var(--gold)' : 'rgba(10,10,10,0.12)' }}
         />
       ))}
     </span>

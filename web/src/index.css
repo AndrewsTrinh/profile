@@ -1,30 +1,30 @@
 @import 'tailwindcss';
 
-/* ===== 8-bit palette (extracted from the reference poster) ===== */
+/* ===== 8-bit palette (VoiceBox editorial: off-white, ink black, aggressive red) ===== */
 :root {
-  --bg: #0d233a;
-  --panel: #061320;
-  --mint: #6be7a0;
-  --coral: #ed8b78;
-  --blue: #2e5db4;
-  --gold: #c7a24c;
-  --teal: #3fb6a6;
-  --cream: #f1eee2;
+  --bg: #fafafa;     /* off-white page */
+  --panel: #ffffff;  /* white cards */
+  --mint: #ef4444;   /* primary red accent (labels, links, headings) */
+  --coral: #ef4444;  /* experience accent (red) */
+  --blue: #525252;   /* education accent (neutral gray) */
+  --gold: #ca8a04;   /* amber — metric highlights */
+  --teal: #16a34a;   /* green — skill/language accents */
+  --cream: #0a0a0a;  /* ink — text + borders */
 
   --border: 3px;
 }
 
 @theme {
-  --color-bg: #0d233a;
-  --color-panel: #061320;
-  --color-mint: #6be7a0;
-  --color-coral: #ed8b78;
-  --color-blue: #2e5db4;
-  --color-gold: #c7a24c;
-  --color-teal: #3fb6a6;
-  --color-cream: #f1eee2;
+  --color-bg: #fafafa;
+  --color-panel: #ffffff;
+  --color-mint: #ef4444;
+  --color-coral: #ef4444;
+  --color-blue: #525252;
+  --color-gold: #ca8a04;
+  --color-teal: #16a34a;
+  --color-cream: #0a0a0a;
   --font-pixel: 'Press Start 2P', monospace;
-  --font-body: 'VT323', monospace;
+  --font-body: 'Pixelify Sans', sans-serif;
 }
 
 * {
@@ -41,11 +41,11 @@ html {
 body {
   margin: 0;
   color: var(--cream);
-  font-family: 'VT323', monospace;
-  font-size: 22px;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 19px;
   font-weight: 400;
-  line-height: 1.7;
-  background-color: var(--bg); /* solid navy */
+  line-height: 1.6;
+  background-color: var(--bg); /* off-white */
 }
 
 /* faint CRT scanlines */
@@ -57,13 +57,13 @@ body::after {
   z-index: 9999;
   background: repeating-linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.10) 0px,
-    rgba(0, 0, 0, 0.10) 1px,
+    rgba(0, 0, 0, 0.06) 0px,
+    rgba(0, 0, 0, 0.06) 1px,
     transparent 1px,
     transparent 3px
   );
   mix-blend-mode: multiply;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 h1, h2, h3 {
@@ -129,7 +129,7 @@ a {
 /* highlighted metric token inside achievements */
 .metric {
   background: var(--gold);
-  color: var(--panel);
+  color: var(--cream); /* ink on amber for contrast */
   padding: 0 3px;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
