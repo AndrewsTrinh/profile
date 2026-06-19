@@ -12,9 +12,10 @@ export const profile = {
   linkedinLabel: 'qatrinh',
   summary:
     "Data Analyst with 5+ years' experience in FinTech and banking, specialising in " +
-    'SQL- and Python-driven data analysis, transaction monitoring, and Power BI business ' +
-    'intelligence dashboarding for leading institutions including Bendigo & Adelaide Bank ' +
-    'and Remitano. Applies advanced analytics, machine learning, NLP, and Generative AI / ' +
+    'SQL- and Python-driven statistical analysis, transaction monitoring, and Power BI ' +
+    'business intelligence dashboarding for leading institutions including Bendigo & ' +
+    'Adelaide Bank and Remitano. Applies advanced statistical modelling, machine learning, ' +
+    'NLP, and Generative AI / ' +
     'LLM solutions on AWS and GCP — building ETL pipelines and data-driven tools that ' +
     'reduced false positives by up to 67%, cut regulatory reporting time by 80%, and ' +
     'lifted marketing conversion by 30%. Passionate about translating complex data into ' +

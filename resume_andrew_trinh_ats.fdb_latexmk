@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1781840187.54988 "resume_andrew_trinh_ats.tex" "resume_andrew_trinh_ats.pdf" "resume_andrew_trinh_ats" 1781840188.36358 0
+["pdflatex"] 1781845644.03106 "resume_andrew_trinh_ats.tex" "resume_andrew_trinh_ats.pdf" "resume_andrew_trinh_ats" 1781845645.83647 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -67,9 +67,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1752391576 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1752391497 3345741 2747c6aed54221c2c6c39b248d5b941b ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "resume_andrew_trinh_ats.aux" 1781840188.30877 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
-  "resume_andrew_trinh_ats.out" 1781840188.03708 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume_andrew_trinh_ats.tex" 1781840180.52809 9844 72761c881a11dedebcab6b39dd25b72c ""
+  "resume_andrew_trinh_ats.aux" 1781845645.69489 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
+  "resume_andrew_trinh_ats.out" 1781845645.09883 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume_andrew_trinh_ats.tex" 1781845614.66736 9863 25296ee2e91f851bade51835e5a35973 ""
   (generated)
   "resume_andrew_trinh_ats.aux"
   "resume_andrew_trinh_ats.log"
