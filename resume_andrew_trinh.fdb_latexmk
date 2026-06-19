@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777374096.39646 "/Users/andrew/projects/latex test/resume_andrew_trinh.tex" "resume_andrew_trinh.pdf" "resume_andrew_trinh" 1777374099.39688 0
-  "/Users/andrew/projects/latex test/resume_andrew_trinh.tex" 1777374092.31591 16190 f38637abc628e395f1bf37c02db8af79 ""
+["pdflatex"] 1781824021.48476 "resume_andrew_trinh.tex" "resume_andrew_trinh.pdf" "resume_andrew_trinh" 1781824023.40021 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -26,6 +25,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/fontawesome5/fa5brands0.tfm" 1651520503 1380 a61d7c2860b3f6d342213a6b9b229e9e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/fontawesome5/fa5free1solid.tfm" 1622837620 1316 1c2ee668ea88be9bd4f39690662cc344 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/fontawesome5/fa5free2solid.tfm" 1622837620 1340 b21002f38a477f345fa9dc96a5613e2b ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb" 1651520503 204258 177851ae99767090543ae24e73c92f2f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb" 1651520503 295323 d099723373a00cc17d5ae0c9738bb5b3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
@@ -182,9 +182,9 @@
   "logos/spark.png" 1770504567.48264 25142 09e38bc032540d4d2cd2aa3e9fe00174 ""
   "logos/sql.png" 1770504368.52413 134628 acece89dc125a9da880138538fc21d82 ""
   "logos/tableau.png" 1770503594.02174 28436 163fea87b150fb265fb1515651f52554 ""
-  "resume_andrew_trinh.aux" 1777374099.27953 531 dfd2bd0bab0ac32610e40a65e2d3f855 "pdflatex"
-  "resume_andrew_trinh.out" 1777374097.63149 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume_andrew_trinh.tex" 1777374092.31591 16190 f38637abc628e395f1bf37c02db8af79 ""
+  "resume_andrew_trinh.aux" 1781824023.26966 531 21873593afd82a73ee456d097efa3f93 "pdflatex"
+  "resume_andrew_trinh.out" 1781824022.19138 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume_andrew_trinh.tex" 1781824012.29953 16328 f541806a491769533b9c98f70b4f10c0 ""
   "skillicons.sty" 1770463908.43462 881 909b421fac0260d05fa3a5511d16c1f8 ""
   (generated)
   "resume_andrew_trinh.aux"

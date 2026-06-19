@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  28 APR 2026 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  19 JUN 2026 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,7 +936,7 @@ LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 209.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 204.
 
 
 [1
@@ -948,6 +948,10 @@ texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2025/t
 exmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./logos/sql.png> <./log
 os/python.png> <./logos/r.png> <./logos/excel.png> <./logos/powerbi.png> <./log
 os/tableau.png> <./logos/aws.png> <./logos/gcp.png> <./logos/spark.png>]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 237.
+
 
 [2]
 
@@ -956,31 +960,28 @@ os/tableau.png> <./logos/aws.png> <./logos/gcp.png> <./logos/spark.png>]
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `resume_andrew_trinh.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  24703 strings out of 473190
  476766 string characters out of 5715800
- 891482 words of memory out of 5000000
+ 889305 words of memory out of 5000000
  47566 multiletter control sequences out of 15000+600000
  572934 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,10n,109p,631b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,10n,109p,643b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/fo
 ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
-urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/hel
-vetic/uhvro8a.pfb>
-Output written on resume_andrew_trinh.pdf (3 pages, 339494 bytes).
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/u
+rw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helv
+etic/uhvro8a.pfb>
+Output written on resume_andrew_trinh.pdf (3 pages, 347743 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

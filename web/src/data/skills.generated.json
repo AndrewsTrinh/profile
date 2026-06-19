@@ -1,0 +1,238 @@
+[
+  {
+    "id": "etl",
+    "skill": "Data Engineering / ETL",
+    "kind": "skill",
+    "since": 2020,
+    "years": 6,
+    "achievements": [
+      {
+        "text": "Agentic AI Framework: Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for framework comparison and national monitoring.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "AML Workbench: Designed an AML analytics workbench on GCP using dbt and BigQuery for external model validation, threshold calibration, and performance benchmarking.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Optimised ETL pipelines, indexing, and data normalisation in Redshift, slashing developer workload by 25%, cloud costs by 30%, and dashboard runtime by 70%.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      }
+    ]
+  },
+  {
+    "id": "ml",
+    "skill": "Machine Learning",
+    "kind": "skill",
+    "since": 2020,
+    "years": 6,
+    "achievements": [
+      {
+        "text": "Developed and fine-tuned scenarios for Child Exploitation, Sextortion, Drug Trafficking, and Terrorism Financing typologies using genetic algorithms, statistical calibration, and trend modelling — achieving 60–70% true positive rates with a 67% reduction in alert volume.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Automated email marketing via customer-classification models (Python/SQL), boosting click-through rates by 30% and enabling scalable campaign personalisation.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      }
+    ]
+  },
+  {
+    "id": "python",
+    "skill": "Python",
+    "kind": "language",
+    "since": 2020,
+    "years": 6,
+    "achievements": [
+      {
+        "text": "Decision Engineering: Built vector-search infrastructure and a real-time streaming UI powering an AUSTRAC Knowledge Hub and AML/CTF Program Review Hub; integrated enforcement-action statements to automatically detect and evaluate regulatory gaps.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "AI Enablement: Co-designed an end-to-end AI-driven UAR-to-SMR pipeline with secure data masking/rehydration and Pydantic-validated LLM prompting; cut regulatory reporting prep time by 80% with strict transparency and data-privacy compliance.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Automated email marketing via customer-classification models (Python/SQL), boosting click-through rates by 30% and enabling scalable campaign personalisation.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      }
+    ]
+  },
+  {
+    "id": "sql",
+    "skill": "SQL",
+    "kind": "language",
+    "since": 2020,
+    "years": 6,
+    "achievements": [
+      {
+        "text": "Led an interim fraud & AML transaction-monitoring function during the DELPHI exit and TechOne transition, engineering advanced SQL detection queries to maintain 100% monitoring continuity across 2M+ transactions with zero compliance breaches.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Engineered SQL replication and assurance testing of 40+ scenarios for the Adelaide Bank → Bendigo Bank migration, achieving 100% scenario alignment.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "AML Workbench: Designed an AML analytics workbench on GCP using dbt and BigQuery for external model validation, threshold calibration, and performance benchmarking.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Automated email marketing via customer-classification models (Python/SQL), boosting click-through rates by 30% and enabling scalable campaign personalisation.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      },
+      {
+        "text": "Optimised ETL pipelines, indexing, and data normalisation in Redshift, slashing developer workload by 25%, cloud costs by 30%, and dashboard runtime by 70%.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      },
+      {
+        "text": "Engineered complex SQL (incl. recursive queries) for MLM commission calculations across 150K+ referral relationships and 4 levels — eliminating the need for a graph database and powering a 4-tier referral program that drove 25% of new-user growth.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      }
+    ]
+  },
+  {
+    "id": "stats",
+    "skill": "Statistical Analysis",
+    "kind": "skill",
+    "since": 2020,
+    "years": 6,
+    "achievements": [
+      {
+        "text": "Developed and fine-tuned scenarios for Child Exploitation, Sextortion, Drug Trafficking, and Terrorism Financing typologies using genetic algorithms, statistical calibration, and trend modelling — achieving 60–70% true positive rates with a 67% reduction in alert volume.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Automated email marketing via customer-classification models (Python/SQL), boosting click-through rates by 30% and enabling scalable campaign personalisation.",
+        "org": "Remitano",
+        "period": "Mar 2020 – Apr 2021"
+      }
+    ]
+  },
+  {
+    "id": "genai",
+    "skill": "Generative AI / LLMs",
+    "kind": "skill",
+    "since": 2021,
+    "years": 5,
+    "achievements": [
+      {
+        "text": "Decision Engineering: Built vector-search infrastructure and a real-time streaming UI powering an AUSTRAC Knowledge Hub and AML/CTF Program Review Hub; integrated enforcement-action statements to automatically detect and evaluate regulatory gaps.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "AI Enablement: Co-designed an end-to-end AI-driven UAR-to-SMR pipeline with secure data masking/rehydration and Pydantic-validated LLM prompting; cut regulatory reporting prep time by 80% with strict transparency and data-privacy compliance.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Agentic AI Framework: Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for framework comparison and national monitoring.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      }
+    ]
+  },
+  {
+    "id": "nlp",
+    "skill": "NLP",
+    "kind": "skill",
+    "since": 2021,
+    "years": 5,
+    "achievements": [
+      {
+        "text": "AI Enablement: Co-designed an end-to-end AI-driven UAR-to-SMR pipeline with secure data masking/rehydration and Pydantic-validated LLM prompting; cut regulatory reporting prep time by 80% with strict transparency and data-privacy compliance.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Agentic AI Framework: Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for framework comparison and national monitoring.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      }
+    ]
+  },
+  {
+    "id": "powerbi",
+    "skill": "Power BI",
+    "kind": "skill",
+    "since": 2021,
+    "years": 5,
+    "achievements": [
+      {
+        "text": "Engineered Power BI dashboards that eliminated 70% of recurring ad-hoc requests and cut alert-prioritisation time by 60%, serving operations, transformation, and governance teams.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      }
+    ]
+  },
+  {
+    "id": "r",
+    "skill": "R",
+    "kind": "language",
+    "since": 2021,
+    "years": 5,
+    "achievements": [
+      {
+        "text": "Developed and fine-tuned scenarios for Child Exploitation, Sextortion, Drug Trafficking, and Terrorism Financing typologies using genetic algorithms, statistical calibration, and trend modelling — achieving 60–70% true positive rates with a 67% reduction in alert volume.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      }
+    ]
+  }
+]

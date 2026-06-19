@@ -1,8 +1,8 @@
-PWD /Users/andrew/projects/latex test
+PWD /Users/andrew/projects/resume/cover_letters
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT cover_letter_hesta.tex
+INPUT /Users/andrew/projects/resume/cover_letters/cover_letter_hesta.tex
 OUTPUT cover_letter_hesta.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls

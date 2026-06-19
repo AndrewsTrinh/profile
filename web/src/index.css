@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+/* ===== 8-bit palette (extracted from the reference poster) ===== */
+:root {
+  --bg: #0d233a;
+  --panel: #061320;
+  --mint: #6be7a0;
+  --coral: #ed8b78;
+  --blue: #2e5db4;
+  --gold: #c7a24c;
+  --teal: #3fb6a6;
+  --cream: #f1eee2;
+
+  --border: 3px;
+}
+
+@theme {
+  --color-bg: #0d233a;
+  --color-panel: #061320;
+  --color-mint: #6be7a0;
+  --color-coral: #ed8b78;
+  --color-blue: #2e5db4;
+  --color-gold: #c7a24c;
+  --color-teal: #3fb6a6;
+  --color-cream: #f1eee2;
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-body: 'VT323', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important; /* hard pixel edges everywhere */
+}
+
+html {
+  /* antialias text so VT323 reads thinner/cleaner; pixelation stays on the icons/logos */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: var(--cream);
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: var(--bg); /* solid navy */
+}
+
+/* faint CRT scanlines */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.10) 0px,
+    rgba(0, 0, 0, 0.10) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.4;
+  margin: 0;
+}
+
+a {
+  color: var(--mint);
+}
+
+/* ===== reusable 8-bit primitives ===== */
+.pixel-panel {
+  background: var(--panel);
+  border: var(--border) solid var(--cream);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.55);
+}
+
+.pixel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 8px 12px;
+  background: var(--panel);
+  color: var(--cream);
+  border: var(--border) solid var(--mint);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+  cursor: pointer;
+}
+.pixel-btn:hover,
+.pixel-btn:focus-visible {
+  background: var(--mint);
+  color: var(--panel);
+  outline: none;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.55);
+}
+
+.pixel-badge {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  padding: 4px 6px;
+  border: 2px solid currentColor;
+  white-space: nowrap;
+}
+
+/* segmented pixel bar: a strip of square cells */
+.pixel-bar {
+  display: flex;
+  gap: 2px;
+  height: 16px;
+}
+.pixel-cell {
+  width: 12px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+/* highlighted metric token inside achievements */
+.metric {
+  background: var(--gold);
+  color: var(--panel);
+  padding: 0 3px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* entrance highlight for the achievements board on hover/focus */
+.card-glow {
+  animation: card-pop 220ms steps(3, end);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.55), 0 0 0 2px var(--mint);
+}
+@keyframes card-pop {
+  0% {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 0 var(--mint);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.55), 0 0 0 2px var(--mint);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
