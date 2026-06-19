@@ -11,13 +11,14 @@ export const profile = {
   linkedinUrl: 'https://www.linkedin.com/in/qatrinh/',
   linkedinLabel: 'qatrinh',
   summary:
-    'Experienced Data Analyst with 5+ years in FinTech and banking, specialising in ' +
-    'SQL-driven financial crime analytics, transaction monitoring, and dashboarding for ' +
-    'leading institutions including Bendigo & Adelaide Bank and Remitano. Dedicated to ' +
-    'leveraging advanced analytics, machine learning, and AWS-based ETL to solve complex ' +
-    'business problems — reducing false positives, optimising cost and performance, and ' +
-    'automating SMR and marketing workflows — while building data-driven tools for ' +
-    'micro-businesses and the community.',
+    "Data Analyst with 5+ years' experience in FinTech and banking, specialising in " +
+    'SQL- and Python-driven data analysis, transaction monitoring, and Power BI business ' +
+    'intelligence dashboarding for leading institutions including Bendigo & Adelaide Bank ' +
+    'and Remitano. Applies advanced analytics, machine learning, NLP, and Generative AI / ' +
+    'LLM solutions on AWS and GCP — building ETL pipelines and data-driven tools that ' +
+    'reduced false positives by up to 67%, cut regulatory reporting time by 80%, and ' +
+    'lifted marketing conversion by 30%. Passionate about translating complex data into ' +
+    'measurable business outcomes across compliance, cost, and performance.',
 } as const;
 
 export type ItemType = 'experience' | 'education';

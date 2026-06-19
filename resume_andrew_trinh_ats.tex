@@ -1,0 +1,133 @@
+% ATS-friendly / tech resume variant of resume_andrew_trinh.tex.
+% Single column, no images/logos, no multi-column tables, standard section
+% headings, plain hyphens, selectable text — built for Workday and similar
+% HR parsers. The styled resume_andrew_trinh.tex remains the human-facing copy.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Plain, parser-friendly section headings: bold, with a thin rule underneath.
+\definecolor{rulecolor}{RGB}{60,60,60}
+\titleformat{\section}
+  {\large\bfseries}{}{0pt}{}[\vspace{2pt}{\color{rulecolor}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em, itemsep=2pt, topsep=2pt}
+
+\newcommand{\role}[3]{%
+  \subsection*{#1 \textnormal{--} \textbf{#2}\hfill #3}}
+
+\begin{document}
+
+%==================== HEADER ====================%
+{\fontsize{22}{26}\selectfont\textbf{Quoc Anh Trinh (Andrew)}}\\[3pt]
+{\large Data Analyst}\\[4pt]
+M.Sc in Business Analytics, Deakin University\\[3pt]
+Phone: +61 451 886 468 \quad|\quad Email: andrews.trinh@gmail.com \quad|\quad
+LinkedIn: \href{https://www.linkedin.com/in/qatrinh/}{linkedin.com/in/qatrinh}
+
+%==================== SUMMARY ====================%
+\section*{Professional Summary}
+Data Analyst with 5+ years' experience in FinTech and banking, specialising in SQL- and
+Python-driven data analysis, transaction monitoring, and Power BI business intelligence
+dashboarding for leading institutions including Bendigo \& Adelaide Bank and Remitano.
+Applies advanced analytics, machine learning, NLP, and Generative AI / LLM solutions on
+AWS and GCP, building ETL pipelines and data-driven tools that reduced false positives by
+up to 67\%, cut regulatory reporting time by 80\%, and lifted marketing conversion by
+30\%. Passionate about translating complex data into measurable business outcomes across
+compliance, cost, and performance.
+
+%==================== TECHNICAL SKILLS ====================%
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages \& Querying:} SQL, Python, R
+  \item \textbf{Analytics \& Machine Learning:} Machine Learning, NLP, Predictive Modelling, Statistical Calibration, Optimisation Algorithms, Scikit-learn, PySpark, Generative AI, LLMs, Agentic AI
+  \item \textbf{BI \& Visualisation:} Power BI, Tableau, Metabase, Excel
+  \item \textbf{Data Engineering \& ETL:} dbt, BigQuery, Amazon Redshift, AWS Glue, Apache Spark, Vector Databases
+  \item \textbf{Cloud \& Platforms:} Amazon Web Services (AWS), Google Cloud Platform (GCP), FastAPI, Next.js
+  \item \textbf{Domain Expertise:} AML/CTF, Transaction Monitoring, Financial Crime Analytics, AUSTRAC Regulatory Reporting, Suspicious Matter Reports (SMR)
+\end{itemize}
+
+%==================== PROFESSIONAL EXPERIENCE ====================%
+\section*{Professional Experience}
+
+\role{Analyst, Intelligence and Analytics - Financial Crime Risk}{Bendigo \& Adelaide Bank}{05/2021 - Present}
+\textit{Australian banking group with 4 commercial banks and 1 digital bank under management}
+\begin{itemize}
+  \item Own the transaction monitoring analytics function, serving operations, transformation, compliance, assurance, and governance teams.
+  \item Own the Power BI dashboards within the transaction monitoring product, designing, developing, and maintaining them to provide key measures, KPIs, and guardrails.
+  \item Research and design new transaction monitoring detection scenarios, then build and fine-tune them using statistical and machine learning techniques.
+  \item Built vector search infrastructure and a real-time streaming UI to power an AUSTRAC Knowledge Hub and AML/CTF Program Review Hub, integrating enforcement action statements to automatically detect and evaluate regulatory gaps.
+  \item Led the establishment of an interim fraud and AML transaction monitoring function during the bank's exit from DELPHI and transition from TechOne, engineering advanced SQL-based detection queries to maintain 100\% monitoring continuity across 2M+ transactions with zero compliance breaches.
+  \item Co-designed and delivered an end-to-end AI-driven UAR-to-SMR pipeline implementing secure data masking/rehydration and Pydantic-validated LLM prompting, reducing regulatory reporting preparation time by 80\% while ensuring strict transparency and data privacy compliance.
+  \item Developed and fine-tuned new transaction monitoring scenarios for Child Exploitation, Sextortion, Drug Trafficking, and Terrorism Financing typologies, leveraging genetic algorithms, statistical calibration, and trend modelling to achieve 60-70\% true positive rates with a 67\% reduction in alert volume.
+  \item Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70\% false positive baseline, maximising detection coverage while avoiding overly narrow scope.
+  \item Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for transaction monitoring framework comparison and national monitoring.
+  \item Built complex SQL and Python-based transaction monitoring scenarios outside vendor platforms and engineered automated daily workflows, processing 150+ alerts daily with 99.9\% data integrity and eliminating manual transfers.
+  \item Led the annual transaction monitoring performance review, applying statistical confidence testing, data sampling, and SQL-based scenario recalibration to reduce false positives by 5\% and remove 5,000+ unnecessary alerts annually, saving 300+ investigation hours per year.
+  \item Engineered SQL-based replication and assurance testing of 40+ transaction monitoring scenarios for the Adelaide Bank to Bendigo Bank migration, achieving 100\% scenario alignment and seamless model transfer.
+  \item Designed and developed an AML analytics workbench on Google Cloud Platform using dbt and BigQuery to support external transaction monitoring model validation, with modular, version-controlled data transformation layers for scenario testing, threshold calibration, and model performance benchmarking.
+\end{itemize}
+
+\role{Data Analyst}{Remitano}{03/2020 - 04/2021}
+\textit{International cryptocurrency exchange that matched \$500M+ in trading value across 30+ countries}
+\begin{itemize}
+  \item Handled all data analytics requests, delivering dashboards and diagnostic reports using Python, SQL, and Metabase.
+  \item Designed, developed, and managed data crawlers, ETL pipelines, and Redshift database structures, and collaborated with engineering teams on complex SQL-based data transformations.
+  \item Automated email marketing via customer classification models (Python/SQL), boosting click-through rates by 30\% and enabling scalable campaign personalisation.
+  \item Optimised ETL pipelines, indexing, and data normalisation in Redshift, reducing developer workload by 25\%, cloud costs by 30\%, and dashboard runtime by 70\%.
+  \item Delivered 100\% on-time analytical reports and dashboards with consistent stakeholder satisfaction scores of 8/10 or higher.
+  \item Engineered complex SQL solutions (including recursive queries) for MLM commission calculations, processing 150K+ referral relationships across 4 levels, eliminating the need for a graph database and powering a 4-tier referral program that drove 25\% of new user growth.
+\end{itemize}
+
+\role{Investment Associate}{National Citizen Bank}{09/2014 - 02/2018}
+\textit{Commercial bank with more than 20 years of operation}
+\begin{itemize}
+  \item Built financial models for property project estimation, company valuation, and debt restructure planning, and presented recommendations to the Investment Council.
+  \item Coordinated with in-house executives and clients on lending due diligence and gathering business information for financial analysis and valuation.
+  \item Secured Investment Council approval for 80\% of recommendations, generating a public equity portfolio CAGR of 10\%.
+  \item Reduced investment approval time by 72 hours and eliminated major process conflicts by drafting the investment procedure with detailed accounting, authority-level, and document-revision controls.
+\end{itemize}
+
+%==================== EDUCATION ====================%
+\section*{Education}
+\begin{itemize}
+  \item Master of Business Analytics, Deakin University, 2019
+  \item Bachelor of General Business Management, National Economics University, 2013
+\end{itemize}
+
+%==================== CERTIFICATIONS ====================%
+\section*{Certifications}
+\begin{itemize}
+  \item CFA Level 1 Passed, CFA Institute, 2013
+  \item Google Cloud Platform Big Data and Machine Learning Fundamentals, Coursera, 2020
+  \item Modernizing Data Lakes and Data Warehouses with GCP, Coursera, 2020
+  \item Building Batch Data Pipelines on GCP, Coursera, 2020
+\end{itemize}
+
+%==================== HONOURS & AWARDS ====================%
+\section*{Honours \& Awards}
+\begin{itemize}
+  \item Third Place \& Honourable Mention, Project SafeAus, Team VAIT, GovHack Australia, 2021
+  \item \#13 public / \#32 private, PetFinder Competition, Team Vicohub-1, Kaggle, 2019
+  \item First Prize \& Runner-up, Programming Competition, Department of Education and Training, 2007-2009
+\end{itemize}
+
+%==================== ADDITIONAL ====================%
+\section*{Additional}
+\begin{itemize}
+  \item Tutored 100+ students in SQL and Python; Coordinator of the CFA Vietnam volunteer team.
+  \item Won 2 Open Government hackathon prizes; build data-driven solutions for micro-businesses.
+\end{itemize}
+
+\end{document}

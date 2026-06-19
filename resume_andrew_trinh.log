@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  19 JUN 2026 09:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  19 JUN 2026 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,10 +948,6 @@ texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2025/t
 exmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./logos/sql.png> <./log
 os/python.png> <./logos/r.png> <./logos/excel.png> <./logos/powerbi.png> <./log
 os/tableau.png> <./logos/aws.png> <./logos/gcp.png> <./logos/spark.png>]
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 237.
-
 
 [2]
 
@@ -966,11 +962,11 @@ Package rerunfilecheck Info: File `resume_andrew_trinh.out' has not changed.
 Here is how much of TeX's memory you used:
  24703 strings out of 473190
  476766 string characters out of 5715800
- 889305 words of memory out of 5000000
+ 890614 words of memory out of 5000000
  47566 multiletter control sequences out of 15000+600000
  572934 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,10n,109p,643b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,10n,109p,764b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/fo
 ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts
@@ -978,7 +974,7 @@ ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts
 type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helv
 etic/uhvro8a.pfb>
-Output written on resume_andrew_trinh.pdf (3 pages, 347743 bytes).
+Output written on resume_andrew_trinh.pdf (3 pages, 347996 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
