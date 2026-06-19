@@ -146,7 +146,7 @@ export const timeline: TimelineItem[] = [
     type: 'education',
     role: 'Master of Business Analytics',
     org: 'Deakin University',
-    start: '2019-01',
+    start: '2018-01',
     end: '2019-12',
     achievements: [
       { text: 'Master of Business Analytics — analytics, machine learning, and data engineering.', skills: [] },
