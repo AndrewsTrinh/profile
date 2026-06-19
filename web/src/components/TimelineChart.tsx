@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { CURRENT_YEAR, timeline, type TimelineItem } from '../data/resume';
 import TimelineItemCard from './TimelineItemCard';
 
-const MIN_YEAR = 2013;
+const MIN_YEAR = 2018;
 const MAX_YEAR = CURRENT_YEAR;
 const RANGE = MAX_YEAR - MIN_YEAR;
 
@@ -97,7 +97,9 @@ function Row({
 export default function TimelineChart() {
   const [activeId, setActiveId] = useState<string | null>(null);
   // newest first reads naturally top-to-bottom
-  const items = [...timeline].reverse();
+  const items = [...timeline]
+    .reverse()
+    .filter((item) => Number(item.start.slice(0, 4)) >= MIN_YEAR);
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-8" aria-labelledby="timeline-h">
