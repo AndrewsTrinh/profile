@@ -5,11 +5,18 @@ export const CURRENT_YEAR = 2026;
 
 export const profile = {
   name: 'Quoc Anh Trinh (Andrew)',
+  heroName: 'Andrew Trinh',
+  initials: 'AT',
+  domain: 'andrewstrinh.github.io/profile',
+  eyebrow: 'DATA · AML · RESEARCH',
+  tagline:
+    'Intelligence & analytics analyst building financial-crime detection systems and privacy-preserving AI.',
   title: 'Data Analyst · M.Sc Business Analytics, Deakin University',
   phone: '+61 451 886 468',
   email: 'andrews.trinh@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/qatrinh/',
   linkedinLabel: 'qatrinh',
+  githubUrl: 'https://github.com/AndrewsTrinh',
   summary:
     "Data Analyst with 5+ years' experience in FinTech and banking, specialising in " +
     'SQL- and Python-driven statistical analysis, transaction monitoring, and Power BI ' +
@@ -38,7 +45,21 @@ export type SkillId =
 export interface Achievement {
   text: string;
   skills: SkillId[]; // focus skills this achievement demonstrates -> drives extraction
+  highlight?: boolean; // shown on the experience timeline (top 2–3 per role)
 }
+
+// The "at a glance" metric cards. Each value is backed by an achievement below.
+export const metrics: { value: string; label: string }[] = [
+  { value: '5+', label: 'Years in AML' },
+  { value: '67%', label: 'Alert cut' },
+  { value: '80%', label: 'Report time ↓' },
+  { value: '70%', label: 'True positive' },
+];
+
+// Credentials shown alongside education (not tied to a timeline entry).
+export const credentials: { title: string; org: string }[] = [
+  { title: 'CFA Level 1', org: 'CFA Institute' },
+];
 
 export interface TimelineItem {
   id: string;
@@ -62,9 +83,7 @@ export interface Project {
   name: string;
   description: string;
   url?: string;
-  accent: 'coral' | 'mint' | 'blue' | 'gold' | 'teal';
-  glyph: 'sparkle' | 'paper' | 'graph';
-  image?: string; // optional real screenshot under public/projects/
+  tags: string[];
 }
 
 export const projects: Project[] = [
@@ -74,8 +93,7 @@ export const projects: Project[] = [
     description:
       'Agentic-AI web app that transforms AUSTRAC guidance documents into structured typology data, enabling transaction-monitoring framework comparison and gap analysis.',
     url: 'https://typologyextractor.vercel.app/',
-    accent: 'coral',
-    glyph: 'sparkle',
+    tags: ['Agentic AI', 'LLM', 'AUSTRAC'],
   },
   {
     id: 'applied-llm-aml',
@@ -83,8 +101,7 @@ export const projects: Project[] = [
     description:
       'Research proposal on applying large language models to AML/CTF — improving typology detection, regulatory reporting, and explainability in financial-crime analytics.',
     url: 'https://github.com/AndrewsTrinh/mphil_research/blob/main/main.pdf',
-    accent: 'mint',
-    glyph: 'paper',
+    tags: ['LLM', 'Research', 'AML/CTF'],
   },
   {
     id: 'graph-analytics-vn',
@@ -92,8 +109,7 @@ export const projects: Project[] = [
     description:
       'Network analysis mapping interlocking directorates and cross-ownership across Vietnamese listed companies, from web-scraped board/management data into an interactive graph visualisation.',
     url: 'https://github.com/AndrewsTrinh/graph_cross_owner_public_equity_vn',
-    accent: 'blue',
-    glyph: 'graph',
+    tags: ['Graph', 'Network Analysis', 'Python'],
   },
 ];
 
@@ -113,18 +129,6 @@ export const focusSkills: SkillMeta[] = [
 // Sorted oldest -> newest.
 export const timeline: TimelineItem[] = [
   {
-    id: 'bsc',
-    type: 'education',
-    role: 'Bachelor of General Business Management',
-    org: 'National Economics University',
-    start: '2013-01',
-    end: '2013-12',
-    achievements: [
-      { text: 'Bachelor of General Business Management.', skills: [] },
-      { text: 'CFA Level 1 passed — CFA Institute, 2013.', skills: [] },
-    ],
-  },
-  {
     id: 'ncb',
     type: 'experience',
     role: 'Investment Associate',
@@ -136,10 +140,12 @@ export const timeline: TimelineItem[] = [
       {
         text: 'Secured Investment Council approval for 80% of recommendations, generating a public equity portfolio CAGR of 10%, drawing on field-tested financial analysis skills and public equity market experience.',
         skills: [],
+        highlight: true,
       },
       {
         text: 'Reduced investment-approval time by 72 hours and eliminated major process conflicts by drafting the investment procedure with detailed instructions for accounting journal entries, authority levels, and document revision.',
         skills: [],
+        highlight: true,
       },
     ],
   },
@@ -167,10 +173,12 @@ export const timeline: TimelineItem[] = [
       {
         text: 'Automated email marketing via customer-classification models (Python/SQL), boosting click-through rates by 30% and enabling scalable campaign personalisation.',
         skills: ['python', 'sql', 'ml', 'stats'],
+        highlight: true,
       },
       {
         text: 'Optimised ETL pipelines, indexing, and data normalisation in Redshift, slashing developer workload by 25%, cloud costs by 30%, and dashboard runtime by 70%.',
         skills: ['etl', 'sql'],
+        highlight: true,
       },
       {
         text: 'Delivered 100% on-time analytical reports and dashboards with consistent stakeholder satisfaction scores of 8/10 or higher.',
@@ -202,10 +210,12 @@ export const timeline: TimelineItem[] = [
       {
         text: 'AI Enablement: Co-designed an end-to-end AI-driven UAR-to-SMR pipeline with secure data masking/rehydration and Pydantic-validated LLM prompting; cut regulatory reporting prep time by 80% with strict transparency and data-privacy compliance.',
         skills: ['genai', 'nlp', 'python'],
+        highlight: true,
       },
       {
         text: 'Developed and fine-tuned scenarios for Child Exploitation, Sextortion, Drug Trafficking, and Terrorism Financing typologies using genetic algorithms, statistical calibration, and trend modelling — achieving 60–70% true positive rates with a 67% reduction in alert volume.',
         skills: ['stats', 'ml', 'r'],
+        highlight: true,
       },
       {
         text: 'Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.',
@@ -214,6 +224,7 @@ export const timeline: TimelineItem[] = [
       {
         text: 'Agentic AI Framework: Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for framework comparison and national monitoring.',
         skills: ['genai', 'nlp', 'etl'],
+        highlight: true,
       },
       {
         text: 'Engineered Power BI dashboards that eliminated 70% of recurring ad-hoc requests and cut alert-prioritisation time by 60%, serving operations, transformation, and governance teams.',

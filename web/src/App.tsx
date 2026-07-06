@@ -1,19 +1,31 @@
+import BrowserBar from './components/BrowserBar';
+import Nav from './components/Nav';
 import Hero from './components/Hero';
-import TimelineChart from './components/TimelineChart';
-import SkillsTable from './components/SkillsTable';
-import ProjectGallery from './components/ProjectGallery';
+import Metrics from './components/Metrics';
+import Skills from './components/Skills';
+import Work from './components/Work';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
+import { useScrollReveal } from './lib/reveal';
 
 export default function App() {
+  useScrollReveal();
+
   return (
-    <main>
-      <Hero />
-      <TimelineChart />
-      <SkillsTable />
-      <ProjectGallery />
-      <footer className="mx-auto max-w-5xl px-4 py-10 text-cream/60" style={{ fontSize: 16 }}>
-        <span style={{ fontFamily: 'var(--font-pixel)', fontSize: 9 }}>★</span> Built with React +
-        Vite · References available upon request.
-      </footer>
-    </main>
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <BrowserBar />
+      <Nav />
+      <main id="main">
+        <Hero />
+        <Metrics />
+        <Skills />
+        <Work />
+        <Experience />
+      </main>
+      <Footer />
+    </>
   );
 }
