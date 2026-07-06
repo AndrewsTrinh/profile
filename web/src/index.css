@@ -13,7 +13,7 @@
   --tan: #c9a876; /* the light-brown accent */
   --tan-deep: #8a6d3f; /* tan text on light backgrounds */
   --tan-ink: #3d2c14; /* text on top of solid tan */
-  --cream: #f4ede4; /* light section background */
+  --cream: #faf6f0; /* light section background */
   --white: #ffffff;
   --ink-soft: #5f6b7d; /* muted body text on cream */
   --cream-soft: #b8c0cf; /* muted body text on navy */
@@ -312,6 +312,58 @@ a:focus-visible,
 }
 .skill__bar i.on {
   background: var(--tan);
+}
+
+/* Relevant-work popover: shows the achievements behind a skill on hover/focus */
+.skill {
+  position: relative;
+}
+.skill__pop {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  width: min(360px, 82vw);
+  background: var(--white);
+  border: 2px solid var(--navy);
+  box-shadow: 5px 5px 0 0 var(--navy-deep);
+  padding: 12px 14px;
+}
+.skill:hover .skill__pop,
+.skill:focus-within .skill__pop,
+.skill:focus .skill__pop {
+  display: block;
+}
+.skill__pop-title {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--tan-deep);
+  margin: 0 0 8px;
+}
+.skill__pop-item {
+  margin-bottom: 10px;
+}
+.skill__pop-item:last-child {
+  margin-bottom: 0;
+}
+.skill__pop-org {
+  font-family: var(--font-label);
+  font-size: 10px;
+  color: var(--tan-deep);
+}
+.skill__pop-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.skill__pop-more {
+  font-family: var(--font-label);
+  font-size: 10px;
+  color: var(--cream-faint);
+  margin: 8px 0 0;
 }
 
 /* Projects -------------------------------------------------------------- */
