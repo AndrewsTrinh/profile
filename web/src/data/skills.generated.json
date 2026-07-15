@@ -12,7 +12,12 @@
         "period": "May 2021 – Present"
       },
       {
-        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "text": "Manual Alert Ingestion Pipeline: Developed, implemented, and maintained a manual fraud/AML alert ingestion pipeline for detection scenarios built outside vendor platforms, feeding 150+ alerts daily into NetReveal and RSA/Outseer with 99.9% data integrity.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Infrastructure Establishment: Initiated and established the team’s Power BI Server, Power BI cloud workspace, and GitLab environment — foundational infrastructure enabling scenario version control and dashboard delivery.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
@@ -65,7 +70,7 @@
         "period": "May 2021 – Present"
       },
       {
-        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "text": "Manual Alert Ingestion Pipeline: Developed, implemented, and maintained a manual fraud/AML alert ingestion pipeline for detection scenarios built outside vendor platforms, feeding 150+ alerts daily into NetReveal and RSA/Outseer with 99.9% data integrity.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
@@ -89,17 +94,22 @@
         "period": "May 2021 – Present"
       },
       {
-        "text": "Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.",
+        "text": "Scenario Development Coordination (2025): Executed and supported team members in building 9 new detection scenarios in 2025 — personally delivering 3 with a statistically significant true positive uplift — while providing guidance on design and calibration.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
       {
-        "text": "Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.",
+        "text": "Manual Alert Ingestion Pipeline: Developed, implemented, and maintained a manual fraud/AML alert ingestion pipeline for detection scenarios built outside vendor platforms, feeding 150+ alerts daily into NetReveal and RSA/Outseer with 99.9% data integrity.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
       {
-        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "text": "Annual Rule Review: Executed and peer-reviewed the annual transaction monitoring rule review in 2022 and 2023, supporting team members with statistical confidence testing, data sampling, and SQL-based scenario recalibration to cut false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours a year.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Rapid Incident Response: Stood up a full detection service from scratch within 2–3 days to support an urgent brand transition and incident response, maintaining uninterrupted transaction monitoring coverage under significant time pressure.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
@@ -143,12 +153,12 @@
         "period": "May 2021 – Present"
       },
       {
-        "text": "Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.",
+        "text": "Scenario Development Coordination (2025): Executed and supported team members in building 9 new detection scenarios in 2025 — personally delivering 3 with a statistically significant true positive uplift — while providing guidance on design and calibration.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
       {
-        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "text": "Annual Rule Review: Executed and peer-reviewed the annual transaction monitoring rule review in 2022 and 2023, supporting team members with statistical confidence testing, data sampling, and SQL-based scenario recalibration to cut false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours a year.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       },
@@ -210,7 +220,17 @@
     "years": 5,
     "achievements": [
       {
-        "text": "Engineered Power BI dashboards that eliminated 70% of recurring ad-hoc requests and cut alert-prioritisation time by 60%, serving operations, transformation, and governance teams.",
+        "text": "Dashboard & Reporting: Built Power BI dashboards and monthly reporting used by Operations and presented at Board level, eliminating 70% of ad-hoc requests and cutting prioritisation time by 60%.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Significant Dashboard Portfolio: Delivered a suite of high-impact Power BI dashboards spanning operational uplift (UAR, TM, and WLM case prioritisation) and detection uplift, including an IFTI SWIFT network graph for cross-border payment analysis and a BEN outlier detection dashboard for anomaly identification.",
+        "org": "Bendigo & Adelaide Bank",
+        "period": "May 2021 – Present"
+      },
+      {
+        "text": "Infrastructure Establishment: Initiated and established the team’s Power BI Server, Power BI cloud workspace, and GitLab environment — foundational infrastructure enabling scenario version control and dashboard delivery.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       }
@@ -229,7 +249,7 @@
         "period": "May 2021 – Present"
       },
       {
-        "text": "Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.",
+        "text": "Annual Rule Review: Executed and peer-reviewed the annual transaction monitoring rule review in 2022 and 2023, supporting team members with statistical confidence testing, data sampling, and SQL-based scenario recalibration to cut false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours a year.",
         "org": "Bendigo & Adelaide Bank",
         "period": "May 2021 – Present"
       }
