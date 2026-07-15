@@ -4,7 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A personal LaTeX repository for Quoc Anh Trinh (Andrew) containing the master resume plus per-application variants (repo root) and per-company cover letters (`cover_letters/`). There is no application code, no test suite, and no CI — everything here is either a `.tex` document, a built artifact, or a small Python utility for preparing logo assets (`scripts/`).
+A personal repository for Quoc Anh Trinh (Andrew) with two largely independent halves:
+
+1. **LaTeX documents** (repo root + `cover_letters/`) — the master resume, per-application resume variants, and per-company cover letters. Built with `pdflatex`; the produced PDFs and their build artifacts are committed.
+2. **Web dashboard** (`web/`) — a React + Vite + Tailwind v4 single-page resume/portfolio site deployed to GitHub Pages. This is the only part with a build toolchain, dependencies, type-checking, and CI.
+
+There is no traditional test suite. The `scripts/` directory holds small Python utilities for preparing logo assets (used by the LaTeX resume and copied into the web app).
 
 ## Build
 
@@ -45,3 +50,28 @@ The scripts in `scripts/` regenerate `logos/`. They are run manually and rarely 
 - `clean_backgrounds.py` — strips grey checkered or near-black backgrounds from already-rasterized PNGs. It targets a hardcoded list (`python.png`, `sql.png`, `aws.png`, `powerbi.png`) and overwrites in place — re-running it is destructive if the source PNG no longer has the grey background it was written to detect.
 
 Required external tools for the pipeline: ImageMagick (`convert`) or `librsvg` (`rsvg-convert`), plus Python with Pillow and requests.
+
+## Web dashboard (`web/`)
+
+A React 18 + Vite 6 + Tailwind v4 SPA that presents the resume as an interactive page. Run everything from inside `web/`:
+
+```bash
+cd web
+npm install          # first time
+npm run dev          # local dev server
+npm run extract      # regenerate src/data/skills.generated.json (also runs on prebuild)
+npm run typecheck    # tsc --noEmit
+npm run build        # tsc --noEmit && vite build  -> web/dist
+npm run preview      # serve the production build locally
+```
+
+Architecture / data flow:
+
+- `src/data/resume.ts` is the **single source of truth** for the dashboard — it is hand-transcribed from `resume_andrew_trinh.tex`. When the canonical resume changes, update `resume.ts` to match; they are not auto-synced. It also pins `CURRENT_YEAR`, which drives years-of-experience math.
+- `scripts/extractSkills.ts` reads `resume.ts` and writes `src/data/skills.generated.json` (per-skill years-of-experience derived from the earliest start year, plus the related achievements). It runs automatically via the `prebuild` script, so a normal `npm run build` always regenerates it — edit `resume.ts`, not the generated JSON.
+- `src/App.tsx` composes the page from section components (`Hero`, `TimelineChart`, `SkillsTable`, `ProjectGallery`). Logo PNGs for the web app live in `web/public/logos/` (a separate copy from the LaTeX `logos/`).
+- `vite.config.ts` sets `base: '/profile/'` because the site is served from `https://<user>.github.io/profile/`. This must stay in sync with the GitHub repo name — renaming the repo breaks asset paths until this is updated (see commit `1a70202`).
+
+## Deployment / CI
+
+`.github/workflows/deploy.yml` is the only CI. It builds `web/` and publishes `web/dist` to GitHub Pages, triggered on pushes to `master` that touch `web/**` (or the workflow itself), plus manual `workflow_dispatch`. The LaTeX documents are not built in CI — only the committed PDFs represent them.
