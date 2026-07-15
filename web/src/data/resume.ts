@@ -18,15 +18,17 @@ export const profile = {
   linkedinLabel: 'qatrinh',
   githubUrl: 'https://github.com/AndrewsTrinh',
   summary:
-    "Data Analyst with 5+ years' experience in FinTech and banking, specialising in " +
-    'SQL- and Python-driven statistical analysis, transaction monitoring, and Power BI ' +
-    'business intelligence dashboarding for leading institutions including Bendigo & ' +
-    'Adelaide Bank and Remitano. Applies advanced statistical modelling, machine learning, ' +
-    'NLP, and Generative AI / ' +
-    'LLM solutions on AWS and GCP — building ETL pipelines and data-driven tools that ' +
-    'reduced false positives by up to 67%, cut regulatory reporting time by 80%, and ' +
-    'lifted marketing conversion by 30%. Passionate about translating complex data into ' +
-    'measurable business outcomes across compliance, cost, and performance.',
+    'Financial crime solutions specialist who builds — not just operates — the analytics ' +
+    'and AI systems that keep banks safe. Domain experience spans banking and financial ' +
+    'crime (Bendigo & Adelaide Bank), FinTech and cryptocurrency (Remitano), and investment ' +
+    'banking (National Citizen Bank) — a breadth that sharpens judgement across regulated ' +
+    'and fast-moving environments alike. Works fluently across a diverse tech stack, from ' +
+    'SQL, Python, R, Power BI, and Tableau to AWS, GCP, Oracle SQL, NetReveal/RSA-Outseer, ' +
+    'and Agentic AI/LLM tooling, turning ambiguous problems into shipped, end-to-end ' +
+    'solutions across Technology, Operations, Data, and Group Risk. Driven by a genuine ' +
+    'passion for building analytics and AI solutions — from Agentic AI pipelines to ' +
+    'self-directed projects like Typology Extractor and PheChat — to strengthen a bank’s ' +
+    'defences against financial crime.',
 } as const;
 
 export type ItemType = 'experience' | 'education';
@@ -59,6 +61,14 @@ export const metrics: { value: string; label: string }[] = [
 // Credentials shown alongside education (not tied to a timeline entry).
 export const credentials: { title: string; org: string }[] = [
   { title: 'CFA Level 1', org: 'CFA Institute' },
+  { title: 'Introduction to Subagents', org: 'Anthropic' },
+  { title: 'Building with the Claude API', org: 'Anthropic' },
+  { title: 'Introduction to Agent Skills', org: 'Anthropic' },
+  { title: 'Claude Code in Action', org: 'Anthropic' },
+  { title: 'AI Fluency Framework & Foundations', org: 'Anthropic' },
+  { title: 'Engineer Data for Predictive Modeling with BigQuery ML', org: 'Google Skill Badge' },
+  { title: 'Create ML Models with BigQuery ML', org: 'Google Skill Badge' },
+  { title: 'Modernizing Data Lakes and Data Warehouses with GCP', org: 'Coursera' },
 ];
 
 export interface TimelineItem {
@@ -83,17 +93,29 @@ export interface Project {
   name: string;
   description: string;
   url?: string;
+  /** Source-code repo, when distinct from the live-app `url` above. */
+  repoUrl?: string;
   tags: string[];
 }
 
 export const projects: Project[] = [
   {
     id: 'typology-extractor',
-    name: 'AUSTRAC Typology Extractor',
+    name: 'Typology Extractor',
     description:
-      'Agentic-AI web app that transforms AUSTRAC guidance documents into structured typology data, enabling transaction-monitoring framework comparison and gap analysis.',
+      'Agentic AI and ETL pipeline that transforms AUSTRAC guidance documents into structured data for transaction monitoring framework comparison. Supports enforcement-gap detection and national scenario benchmarking across financial crime typologies.',
     url: 'https://typologyextractor.vercel.app/',
+    repoUrl: 'https://github.com/AndrewsTrinh/aml_llm',
     tags: ['Agentic AI', 'LLM', 'AUSTRAC'],
+  },
+  {
+    id: 'phechat',
+    name: 'PheChat',
+    description:
+      'Agentic RAG chatbot built for small and medium businesses, combining retrieval-augmented generation with autonomous agent workflows to answer customer queries and automate routine business tasks.',
+    url: 'https://phechat.com',
+    repoUrl: 'https://github.com/lf2foce/phechat-agent',
+    tags: ['Agentic AI', 'RAG', 'Chatbot'],
   },
   {
     id: 'applied-llm-aml',
@@ -218,8 +240,9 @@ export const timeline: TimelineItem[] = [
         highlight: true,
       },
       {
-        text: 'Scenario Design: Researched and designed 9 new detection scenarios, applying statistical analysis to calibrate each to an effective ~70% false-positive baseline — maximising coverage while avoiding overly narrow scope.',
+        text: 'Scenario Development Coordination (2025): Executed and supported team members in building 9 new detection scenarios in 2025 — personally delivering 3 with a statistically significant true positive uplift — while providing guidance on design and calibration.',
         skills: ['stats', 'sql'],
+        highlight: true,
       },
       {
         text: 'Agentic AI Framework: Engineered a typology extractor using Agentic AI and advanced ETL to transform 156 AUSTRAC guidance documents into structured data for framework comparison and national monitoring.',
@@ -227,16 +250,32 @@ export const timeline: TimelineItem[] = [
         highlight: true,
       },
       {
-        text: 'Engineered Power BI dashboards that eliminated 70% of recurring ad-hoc requests and cut alert-prioritisation time by 60%, serving operations, transformation, and governance teams.',
+        text: 'Dashboard & Reporting: Built Power BI dashboards and monthly reporting used by Operations and presented at Board level, eliminating 70% of ad-hoc requests and cutting prioritisation time by 60%.',
         skills: ['powerbi'],
       },
       {
-        text: 'Built SQL & Python scenarios outside vendor platforms with automated daily workflows feeding alerts and internal SMRs into vendor systems — 150+ alerts daily at 99.9% data integrity, eliminating manual transfers.',
+        text: 'Manual Alert Ingestion Pipeline: Developed, implemented, and maintained a manual fraud/AML alert ingestion pipeline for detection scenarios built outside vendor platforms, feeding 150+ alerts daily into NetReveal and RSA/Outseer with 99.9% data integrity.',
         skills: ['sql', 'python', 'etl'],
       },
       {
-        text: 'Led the annual performance review using statistical confidence testing, sampling, and SQL recalibration — reducing false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours annually.',
+        text: 'Annual Rule Review: Executed and peer-reviewed the annual transaction monitoring rule review in 2022 and 2023, supporting team members with statistical confidence testing, data sampling, and SQL-based scenario recalibration to cut false positives by 5%, removing 5,000+ unnecessary alerts and saving 300+ investigation hours a year.',
         skills: ['stats', 'sql', 'r'],
+      },
+      {
+        text: 'Rapid Incident Response: Stood up a full detection service from scratch within 2–3 days to support an urgent brand transition and incident response, maintaining uninterrupted transaction monitoring coverage under significant time pressure.',
+        skills: ['sql'],
+      },
+      {
+        text: 'GitLab Migration: Migrated manual detection scenarios from a shared network drive to GitLab, improving version control, auditability, and scenario governance.',
+        skills: [],
+      },
+      {
+        text: 'Significant Dashboard Portfolio: Delivered a suite of high-impact Power BI dashboards spanning operational uplift (UAR, TM, and WLM case prioritisation) and detection uplift, including an IFTI SWIFT network graph for cross-border payment analysis and a BEN outlier detection dashboard for anomaly identification.',
+        skills: ['powerbi'],
+      },
+      {
+        text: 'Infrastructure Establishment: Initiated and established the team’s Power BI Server, Power BI cloud workspace, and GitLab environment — foundational infrastructure enabling scenario version control and dashboard delivery.',
+        skills: ['powerbi', 'etl'],
       },
       {
         text: 'Engineered SQL replication and assurance testing of 40+ scenarios for the Adelaide Bank → Bendigo Bank migration, achieving 100% scenario alignment.',
