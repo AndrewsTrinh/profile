@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{skillicons}
+
+% Define colors matching the PDF
+\definecolor{headerblue}{RGB}{13,35,58}
+\definecolor{sectionline}{RGB}{13,35,58}
+
+% Define custom mdframed style for dashed left border
+\mdfdefinestyle{dashedleft}{
+  hidealllines=true,
+  leftline=true,
+  linecolor=sectionline,
+  linewidth=2pt,
+  tikzsetting={draw=sectionline, line width=2pt, dashed, dash pattern=on 4pt off 2pt},
+  innerleftmargin=10pt,
+  innerrightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt,
+  skipabove=0pt,
+  skipbelow=0pt
+}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,leftmargin=0em}
+
+% Custom section command with horizontal line
+\newcommand{\linesection}[1]{%
+  \vspace{10pt}%
+  \noindent{\color{headerblue}\large\bfseries #1}\hspace{0.5em}{\color{sectionline}\leavevmode\leaders\hrule height 1.5pt\hfill\kern0pt}%
+  \par\vspace{8pt}%
+}
+
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% Environment for section content with left border
+\newenvironment{sectioncontent}
+  {\par\vspace{4pt}\leftskip=8pt\relax
+   \def\item{\par\hangindent=1.5em\hangafter=1\textbullet\hspace{0.5em}}}
+  {\par\vspace{4pt}}
+
+\begin{document}
+
+%==================== HEADER ====================%
+\pagecolor{white}
+\noindent\begin{minipage}{\textwidth}
+\vspace{10pt}
+\color{black}
+\raggedright
+{\fontsize{28}{32}\selectfont\textbf{QUOC ANH TRINH (ANDREW)}}\\[6pt]
+{\normalsize\textit{Financial Crime Solutions Analyst, M.Sc in Business Analytics, Deakin University}}\\[4pt]
+{\normalsize \includegraphics[height=1.2em]{logos/sql.png} \includegraphics[height=1.2em]{logos/python.png} \includegraphics[height=1.2em]{logos/r.png} \includegraphics[height=1.2em]{logos/excel.png} \includegraphics[height=1.2em]{logos/powerbi.png} \includegraphics[height=1.2em]{logos/tableau.png} \includegraphics[height=1.2em]{logos/aws.png} \includegraphics[height=1.2em]{logos/gcp.png} \includegraphics[height=1.2em]{logos/spark.png}}\\[4pt]
+{\normalsize\faPhone\ : +61 451 886 468 \quad|\quad \faEnvelope\ : andrews.trinh@gmail.com \quad|\quad \faLinkedin\ : \href{https://www.linkedin.com/in/qatrinh/}{qatrinh}}
+\vspace{10pt}
+\end{minipage}%
+
+\vspace{8pt}
+
+\vspace{6pt}
+
+%==================== SUMMARY SECTION ====================%
+\linesection{FINANCIAL CRIME SOLUTIONS}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Financial crime solutions specialist with 5+ years' experience in banking and FinTech, driving the strategic design, implementation, and oversight of transaction monitoring technology, data analytics, and AI-driven detection systems at Bendigo \& Adelaide Bank (\textbf{NetReveal}, \textbf{RSA/Outseer}, \textbf{Oracle SQL}) and Remitano. Partners across Technology, Operations, Data, and Group Risk to continuously assess and uplift screening and detection capabilities, reducing false positives by up to 67\%, cutting regulatory reporting time by 80\%, and lifting marketing conversion by 30\%. Applies advanced analytics, automation, and Generative AI/LLMs to strengthen a bank's defences against financial crime.
+\end{itemize}
+\end{mdframed}
+
+\vspace{6pt}
+
+%==================== KEY SKILLS ====================%
+\linesection{KEY SKILLS}
+
+\noindent\begin{minipage}{\textwidth}
+\hspace{2pt}\vrule width 2pt\hspace{15pt}%
+\begin{minipage}[t]{\textwidth-19pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Financial Crime Solutions \& Systems Oversight:}\\[0pt]
+\textit{(NetReveal, RSA/Outseer, Oracle SQL, GCP, AWS)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Executed and supported team members in the design, implementation \& oversight of vendor-agnostic transaction monitoring scenarios, feeding \textbf{150+} alerts daily into \textbf{NetReveal} \& \textbf{RSA/Outseer} with \textbf{99.9\%} data integrity\\
+\textbullet\ Engineered \textbf{Oracle SQL}-based interim monitoring maintaining \textbf{100\%} continuity across \textbf{2M+} transactions during a core banking system migration\\
+\textbullet\ Designed an \textbf{AML analytics workbench} on GCP (dbt, BigQuery), extending systems oversight beyond core vendor platforms for model validation \& benchmarking
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Screening \& Detection Systems:}\\[0pt]
+\textit{(SQL, Python, R, statistical calibration)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Fine-tuned scenarios utilising optimisation algorithms \& statistical calibration achieving \textbf{60--70\%} true positive rates, \textbf{67\%} alert reduction\\
+\textbullet\ Researched \& designed \textbf{9 new} detection scenarios, statistically calibrated to a \textbf{$\sim$70\%} false positive baseline for optimal detection breadth\\
+\textbullet\ Replicated \textbf{40+} transaction monitoring scenarios in Oracle SQL for assurance \& \textbf{100\%} logic alignment during a bank migration
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Data \& Analytics Strategy (AI/Automation):}\\[0pt]
+\textit{(Python, LLMs, NLP, Agentic AI)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Architected \textbf{Agentic AI solutions} (FastAPI/GCP) including \textbf{typology extractors} for framework comparison and \textbf{enforcement action checkers} for AML/CTF Program review\\
+\textbullet\ Automated \textbf{AUSTRAC reporting pipeline} with SQL, Python, NLP and LLMs, reducing report preparation time by \textbf{80\%}\\
+\textbullet\ Automated email marketing via customer classification driving \textbf{30\%} CTR uplift
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Visualisation \& Reporting:}\\[0pt]
+\textit{(PowerBI, Metabase)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Engineered Power BI dashboards eliminating \textbf{70\%} frequent ad-hoc requests, reducing prioritisation time by \textbf{60\%}\\
+\textbullet\ Delivered \textbf{100\%} on-time analytical reports/dashboards with \textbf{8/10+} satisfaction
+\end{minipage}
+
+\vspace{6pt}
+
+\noindent\begin{minipage}[t]{0.28\textwidth}
+\textbf{\color{headerblue}Stakeholder Engagement:}\\[0pt]
+\textit{(Technology, Operations, Data, Group Risk)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.68\textwidth}
+\textbullet\ Own the transaction monitoring analytics function as the central link between Technology, Operations, Data, Compliance, Assurance \& Governance teams\\
+\textbullet\ ETL optimisation reducing developer workload by \textbf{25\%}, cloud costs \textbf{30\%}, and dashboard runtime \textbf{70\%}
+\end{minipage}
+
+\end{minipage}
+\end{minipage}
+
+\vspace{6pt}
+
+%==================== PROJECTS ====================%
+\linesection{PROJECTS}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Typology Extractor} — Agentic AI and ETL pipeline that transforms AUSTRAC guidance documents into structured data for transaction monitoring framework comparison. Supports enforcement-gap detection and national scenario benchmarking across financial crime typologies.
+    \item \textbf{PheChat} (\href{https://phechat.com}{phechat.com}) — Agentic RAG chatbot built for small and medium businesses, combining retrieval-augmented generation with autonomous agent workflows to answer customer queries and automate routine business tasks.
+\end{itemize}
+\end{mdframed}
+
+\vspace{6pt}
+
+%==================== PROFESSIONAL EXPERIENCE ====================%
+\linesection{PROFESSIONAL EXPERIENCE}
+\begin{mdframed}[style=dashedleft]
+
+\subsection*{Analyst \hfill \textbf{Bendigo \& Adelaide Bank} \hfill 05/2021 - Present}
+\textit{Intelligence and Analytics - Financial Crime Risk}\\
+\textit{Australian banking group with 4 commercial banks and 1 digital bank under management}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Scenario Management:} Build, review, and calibrate transaction monitoring detection scenarios, applying research and statistical analysis to drive the evergreen assessment of screening and detection systems.
+    \item \textbf{Solution Delivery:} Design and deliver financial crime detection solutions—including the AI-driven UAR-to-SMR automation pipeline and manual fraud/AML detection scenarios built outside vendor platforms—partnering across Technology, Operations, and Data teams.
+    \item \textbf{Framework Set-Up:} Set up and maintain the Power BI workspace and GitLab space underpinning the transaction monitoring product.
+    \item \textbf{Dashboard Building:} Own the Power BI dashboards as part of the transaction monitoring product—designing, developing, and maintaining them to provide key measures, KPIs, and guardrails.
+\end{itemize}
+
+\textbf{ACHIEVEMENTS}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Annual Rule Review:} Executed and peer-reviewed the annual transaction monitoring rule review in \textbf{2022} and \textbf{2023}, supporting team members with statistical confidence testing, data sampling, and SQL-based scenario recalibration to cut false positives by \textbf{5\%}, removing \textbf{5,000+} unnecessary alerts and saving \textbf{300+} investigation hours a year.
+    \item \textbf{Scenario Development Coordination (2025):} Executed and supported team members in building \textbf{5} new detection scenarios in \textbf{2025}—personally delivering \textbf{3} with a statistically significant true positive uplift—while providing guidance on design and calibration.
+    \item \textbf{UAR-to-SMR Automation (2025):} Co-delivered an end-to-end \textbf{AI-driven UAR-to-SMR submission automation} pipeline—implementing secure \textbf{data masking/rehydration} and \textbf{Pydantic-validated LLM prompting}—cutting regulatory reporting preparation time by \textbf{80\%} while ensuring strict transparency and data privacy compliance.
+    \item \textbf{Manual Alert Ingestion Pipeline:} Developed, implemented, and maintained a manual fraud/AML alert ingestion pipeline for detection scenarios built outside vendor platforms, feeding \textbf{150+ alerts daily} into \textbf{NetReveal} and \textbf{RSA/Outseer} with \textbf{99.9\% data integrity}.
+    \item \textbf{Rapid Incident Response:} Stood up a full detection service from scratch within \textbf{2--3 days} to support an urgent brand transition and incident response, maintaining uninterrupted transaction monitoring coverage under significant time pressure.
+    \item \textbf{GitLab Migration:} Migrated manual detection scenarios from a shared network drive to \textbf{GitLab}, improving version control, auditability, and scenario governance.
+    \item \textbf{Dashboard \& Reporting:} Built Power BI dashboards and monthly reporting used by Operations and presented at \textbf{Board level}, eliminating \textbf{70\%} of ad-hoc requests and cutting prioritisation time by \textbf{60\%}.
+    \item \textbf{Significant Dashboard Portfolio:} Delivered a suite of high-impact Power BI dashboards spanning \textbf{operational uplift} (UAR, TM, and WLM case prioritisation) and \textbf{detection uplift}, including an \textbf{IFTI SWIFT network graph} for cross-border payment analysis and a \textbf{BEN outlier detection} dashboard for anomaly identification.
+    \item \textbf{Infrastructure Establishment:} Initiated and established the team's \textbf{Power BI Server}, \textbf{Power BI cloud} workspace, and \textbf{GitLab} environment—foundational infrastructure enabling scenario version control and dashboard delivery.
+\end{itemize}
+
+\vspace{4pt}
+
+\subsection*{Data Analyst \hfill \textbf{Remitano} \hfill 03/2020 - 04/2021}
+\textit{International cryptocurrency exchange that matched \$500M+ in trading value and operated in more than 30 countries.}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Owned all data analytics requests, delivering dashboards and diagnostic reports in Python, SQL, and Metabase.
+    \item Built marketing predictive models to automate and optimise strategy deployment.
+    \item Designed, developed, and managed data crawlers, ETL pipelines, and Redshift database structures.
+    \item Collaborated with engineering teams on complex SQL-based data transformations for scalable operational and marketing analytics.
+\end{itemize}
+
+\textbf{ACHIEVEMENTS}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Automated email marketing via customer classification models (Python/SQL), boosting click-through rates by \textbf{30\%} and enabling scalable campaign personalisation.
+    \item Optimised ETL pipelines, indexing, and data normalisation in Redshift, slashing developer workload by \textbf{25\%}, cloud costs by \textbf{30\%}, and dashboard runtime by \textbf{70\%}.
+    \item Delivered \textbf{100\% on-time} analytical reports and dashboards with consistent stakeholder satisfaction scores of \textbf{8/10 or higher}.
+    \item Engineered complex SQL solutions (including recursive queries) for MLM commission calculations, processing \textbf{150K+} referral relationships across \textbf{4} levels to simplify payout computation, eliminate the need for a graph database, and power a \textbf{4-tier} referral program that drove \textbf{25\%} of new user growth.
+\end{itemize}
+
+\vspace{4pt}
+
+\subsection*{Investment Associate \hfill \textbf{National Citizen Bank} \hfill 09/2014-02/2018}
+\textit{National Citizen Bank -- A Commercial Bank with more than 20 years of operation}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Built financial models for property project estimation, company valuation, and debt restructuring, presenting findings to the Investment Council to support investment recommendations.
+    \item Coordinated with in-house executives and clients on lending due diligence, gathering business information to support financial analysis and valuation.
+\end{itemize}
+
+\textbf{ACHIEVEMENTS}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Secured Investment Council approval for \textbf{80\%} of recommendations, generating a public equity portfolio \textbf{CAGR of 10\%}.
+    \item Cut investment approval time by \textbf{72 hours} and eliminated process conflicts by drafting a formal investment procedure covering accounting journal entries, authority levels, and document revision.
+\end{itemize}
+
+\end{mdframed}
+
+\vspace{6pt}
+
+%==================== HONOURS & AWARDS ====================%
+\linesection{HONOURS \& AWARDS}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Third place \& Honourable Mention - Project SafeAus - Making Australia safer, Team VAIT - GovHack Australia, 09/2021
+    \item \#13 in public test and \#32 in private test - PetFinder Competition, Team Vicohub-1 -- Kaggle, 02/2019-03/2019
+    \item First prize \& Runner-up - Programming Competition -- Department of Education and Training -- 2007, 2008 \& 2009
+\end{itemize}
+\end{mdframed}
+
+%==================== PROFESSIONAL QUALIFICATION ====================%
+\linesection{PROFESSIONAL QUALIFICATIONS}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item CFA Level 1 Passed -- CFA Institute, 2013
+    \item Google Cloud Platform Big Data and Machine Learning Fundamentals -- Coursera, 2020
+    \item Modernizing Data Lakes and Data Warehouses with GCP -- Coursera, 2020
+    \item Building Batch Data Pipelines on GCP -- Coursera, 2020
+\end{itemize}
+\end{mdframed}
+
+%==================== EDUCATION ====================%
+\linesection{EDUCATION}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Master of Business Analytics -- Deakin University, 2019
+    \item Bachelor of General Business Management -- National Economics University, 2013
+\end{itemize}
+\end{mdframed}
+
+%==================== VOLUNTEER & HOBBIES ====================%
+\linesection{VOLUNTEER ACTIVITIES \& HOBBIES}
+\begin{mdframed}[style=dashedleft]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item Tutored 100+ students in SQL and Python
+    \item Won 2 Open Gov hackathon prizes
+    \item Served as Coordinator of CFA Vietnam volunteer team
+    \item Hobbies: Sports (Football/Soccer, Powerlifting), Building data-driven solutions for micro-businesses
+\end{itemize}
+\end{mdframed}
+
+%==================== REFERENCES ====================%
+\linesection{REFERENCES}
+\textit{Available upon request}
+
+\end{document}
