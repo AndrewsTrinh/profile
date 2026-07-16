@@ -37,7 +37,7 @@ export function Chat() {
   const [input, setInput] = useState('');
   const { messages, sendMessage, status, addToolApprovalResponse } = useChat<ChatUIMessage>({
     messages: [GREETING],
-    transport: new DefaultChatTransport({ api: '/api/chat' }),
+    transport: new DefaultChatTransport({ api: process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api/chat' : '/api/chat' }),
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
   });
 
