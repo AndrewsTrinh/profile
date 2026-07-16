@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "corpus": "tsx scripts/build-mphil-corpus.ts",
+    "get-google-token": "tsx scripts/get-google-refresh-token.ts"
   },
   "dependencies": {
     "@ai-sdk/react": "^4.0.30",
@@ -36,6 +38,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
