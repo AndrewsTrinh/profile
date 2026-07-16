@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  16 JUL 2026 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  16 JUL 2026 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -929,8 +929,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 69.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
+8.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
@@ -960,7 +960,7 @@ texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2025/t
 exmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./logos/sql.png> <./log
 os/python.png> <./logos/r.png> <./logos/excel.png> <./logos/powerbi.png> <./log
 os/tableau.png> <./logos/aws.png> <./logos/gcp.png> <./logos/spark.png>]
-<logos/anthropic.png, id=39, 513.92pt x 513.92pt>
+<logos/anthropic.png, id=41, 513.92pt x 513.92pt>
 File: logos/anthropic.png Graphic file (type png)
 <use logos/anthropic.png>
 Package pdftex.def Info: logos/anthropic.png  used on input line 175.
@@ -1032,21 +1032,21 @@ Package rerunfilecheck Info: File `resume_andrew_trinh_bendigo_fcs.out' has not
 Here is how much of TeX's memory you used:
  24711 strings out of 473190
  477170 string characters out of 5715800
- 876189 words of memory out of 5000000
+ 876191 words of memory out of 5000000
  47573 multiletter control sequences out of 15000+600000
  572934 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,10n,109p,914b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,10n,109p,855b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/fo
 ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts
 /type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
 urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/hel
 vetic/uhvro8a.pfb>
-Output written on resume_andrew_trinh_bendigo_fcs.pdf (4 pages, 353169 bytes).
+Output written on resume_andrew_trinh_bendigo_fcs.pdf (4 pages, 356408 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
