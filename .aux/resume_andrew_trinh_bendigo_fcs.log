@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  16 JUL 2026 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.13)  16 JUL 2026 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,7 +766,7 @@ Underfull \hbox (badness 1571) in paragraph at lines 119--121
  []
 
 
-Overfull \hbox (8.14377pt too wide) in paragraph at lines 164--165
+Overfull \hbox (8.14377pt too wide) in paragraph at lines 163--164
 \OT1/phv/m/n/10.95 guid-ance doc-u-ments into struc-tured data for trans-ac-tion mon-i-tor-ing frame-work com-par-i-son. Sup-ports enforcement-
  []
 
@@ -775,7 +775,11 @@ Overfull \hbox (8.14377pt too wide) in paragraph at lines 164--165
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc} <./logos/sql.png> <./logos/python.png> <./logos/r.png> <./logos/excel.png> <./logos/powerbi.png> <./logos/tableau.png> <./logos/aws.png> <./logos/gcp.png> <./logos/spark.png>]
-<logos/anthropic.png, id=39, 513.92pt x 513.92pt>
+<logos/anthropic.png, id=41, 513.92pt x 513.92pt>
+File: logos/anthropic.png Graphic file (type png)
+<use logos/anthropic.png>
+Package pdftex.def Info: logos/anthropic.png  used on input line 174.
+(pdftex.def)             Requested size: 10.94711pt x 10.95pt.
 File: logos/anthropic.png Graphic file (type png)
 <use logos/anthropic.png>
 Package pdftex.def Info: logos/anthropic.png  used on input line 175.
@@ -792,10 +796,10 @@ File: logos/anthropic.png Graphic file (type png)
 <use logos/anthropic.png>
 Package pdftex.def Info: logos/anthropic.png  used on input line 178.
 (pdftex.def)             Requested size: 10.94711pt x 10.95pt.
-File: logos/anthropic.png Graphic file (type png)
-<use logos/anthropic.png>
-Package pdftex.def Info: logos/anthropic.png  used on input line 179.
-(pdftex.def)             Requested size: 10.94711pt x 10.95pt.
+File: logos/gcp.png Graphic file (type png)
+<use logos/gcp.png>
+Package pdftex.def Info: logos/gcp.png  used on input line 179.
+(pdftex.def)             Requested size: 13.60547pt x 10.95pt.
 File: logos/gcp.png Graphic file (type png)
 <use logos/gcp.png>
 Package pdftex.def Info: logos/gcp.png  used on input line 180.
@@ -804,34 +808,28 @@ File: logos/gcp.png Graphic file (type png)
 <use logos/gcp.png>
 Package pdftex.def Info: logos/gcp.png  used on input line 181.
 (pdftex.def)             Requested size: 13.60547pt x 10.95pt.
-File: logos/gcp.png Graphic file (type png)
-<use logos/gcp.png>
-Package pdftex.def Info: logos/gcp.png  used on input line 182.
-(pdftex.def)             Requested size: 13.60547pt x 10.95pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Overfull \hbox (9.08618pt too wide) in paragraph at lines 207--208
+Overfull \hbox (9.08618pt too wide) in paragraph at lines 206--207
 \OT1/phv/b/n/10.95 tion \OT1/phv/m/n/10.95 pipeline|implementing se-cure \OT1/phv/b/n/10.95 data mask-ing/rehydration \OT1/phv/m/n/10.95 and \OT1/phv/b/n/10.95 Pydantic-validated LLM prompt-ing\OT1/phv/m/n/10.95 |cutting
  []
 
 
-Overfull \hbox (6.94061pt too wide) in paragraph at lines 213--214
+Overfull \hbox (6.94061pt too wide) in paragraph at lines 212--213
 []\OT1/phv/b/n/10.95 Infrastructure Es-tab-lish-ment: \OT1/phv/m/n/10.95 Ini-ti-ated and es-tab-lished the team's \OT1/phv/b/n/10.95 Power BI Server\OT1/phv/m/n/10.95 , \OT1/phv/b/n/10.95 Power BI cloud \OT1/phv/m/n/10.95 workspace,
  []
 
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 219.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 218.
 
 
 [2 <./logos/anthropic.png>]
 
-[3]
-
-[4] (.aux/resume_andrew_trinh_bendigo_fcs.aux)
+[3] (.aux/resume_andrew_trinh_bendigo_fcs.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -840,18 +838,18 @@ Package rerunfilecheck Info: File `resume_andrew_trinh_bendigo_fcs.out' has not 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24712 strings out of 473190
- 477217 string characters out of 5715800
- 876189 words of memory out of 5000000
+ 24711 strings out of 473190
+ 477211 string characters out of 5715800
+ 875857 words of memory out of 5000000
  47573 multiletter control sequences out of 15000+600000
  572934 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,10n,109p,855b,957s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on .aux/resume_andrew_trinh_bendigo_fcs.pdf (4 pages, 353169 bytes).
+Output written on .aux/resume_andrew_trinh_bendigo_fcs.pdf (3 pages, 355825 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
