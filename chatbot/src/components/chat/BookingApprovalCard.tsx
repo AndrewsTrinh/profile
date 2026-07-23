@@ -1,4 +1,4 @@
-import type { bookingInputSchema } from '@/lib/tools/booking';
+import type { bookingInputSchema } from '@/lib/tools/booking-types';
 import type { z } from 'zod';
 
 type BookingInput = z.infer<typeof bookingInputSchema>;
@@ -14,7 +14,7 @@ export function BookingApprovalCard({
 
   return (
     <div className="mt-2 rounded-xl border border-ctp-mauve/50 bg-ctp-surface0 p-4">
-      <p className="text-xs font-semibold uppercase tracking-wide text-ctp-mauve">Confirm booking request</p>
+      <p className="text-xs font-semibold uppercase tracking-wide text-ctp-mauve">☕ Coffee Chat Invitation</p>
       <dl className="mt-2 space-y-1 text-sm">
         <div className="flex gap-2">
           <dt className="w-20 shrink-0 text-ctp-subtext0">Name</dt>
@@ -30,6 +30,18 @@ export function BookingApprovalCard({
             {start.toLocaleString('en-AU', { dateStyle: 'full', timeStyle: 'short' })} ({input.durationMinutes}min)
           </dd>
         </div>
+        {input.location && (
+          <div className="flex gap-2">
+            <dt className="w-20 shrink-0 text-ctp-subtext0">Location</dt>
+            <dd className="text-ctp-text">{input.location}</dd>
+          </div>
+        )}
+        {input.visitorPhone && (
+          <div className="flex gap-2">
+            <dt className="w-20 shrink-0 text-ctp-subtext0">Phone</dt>
+            <dd className="text-ctp-text">{input.visitorPhone}</dd>
+          </div>
+        )}
         {input.note && (
           <div className="flex gap-2">
             <dt className="w-20 shrink-0 text-ctp-subtext0">Note</dt>
@@ -38,7 +50,7 @@ export function BookingApprovalCard({
         )}
       </dl>
       <p className="mt-3 text-xs text-ctp-subtext0">
-        Nothing is booked until you confirm — this will create a real calendar invite.
+        Leave your details here and I&apos;ll see you for a coffee chat! Let&apos;s talk about AI, data, and everything in between.
       </p>
       <div className="mt-3 flex gap-2">
         <button
@@ -46,7 +58,7 @@ export function BookingApprovalCard({
           onClick={() => onRespond(true)}
           className="rounded-lg bg-ctp-mauve px-4 py-1.5 text-sm font-semibold text-ctp-crust hover:opacity-90"
         >
-          Confirm booking
+          Schedule Chat
         </button>
         <button
           type="button"

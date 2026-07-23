@@ -1,0 +1,3 @@
+CREATE EXTENSION IF NOT EXISTS vector;
+
+ALTER TABLE corpus_chunks ADD COLUMN IF NOT EXISTS embedding vector(768);

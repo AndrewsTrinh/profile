@@ -1,40 +1,40 @@
 import os
-import json
-import numpy as np
-from google import genai
-from typing import List, Dict, Any
+import sys
+from typing import Dict, Any
 
-CORPUS_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'src', 'data', 'mphil-corpus.json')
-try:
-    with open(CORPUS_PATH, 'r') as f:
-        CORPUS = json.load(f)
-except Exception:
-    CORPUS = []
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from rag_lib import load_corpus, retrieve_top_k
+from bookings_lib import find_bookings
 
-def cosine_similarity(a: List[float], b: List[float]) -> float:
-    return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
+CORPUS_NAME = "mphil"
+CORPUS = load_corpus(CORPUS_NAME)
+
+RESUME_CORPUS_NAME = "resume"
+RESUME_CORPUS = load_corpus(RESUME_CORPUS_NAME)
+BEHAVIORAL_CORPUS_NAME = "behavioral"
+BEHAVIORAL_CORPUS = load_corpus(BEHAVIORAL_CORPUS_NAME)
 
 def execute_mphil_research(query: str) -> Dict[str, Any]:
     if not CORPUS:
         return {"passages": [], "error": "The MPhil proposal corpus has not been generated yet."}
-    
-    # Needs GOOGLE_API_KEY env var
-    client = genai.Client()
-    response = client.models.embed_content(
-        model='text-embedding-004',
-        contents=query
-    )
-    query_embedding = response.embeddings[0].values
-    
-    ranked = []
-    for chunk in CORPUS:
-        score = cosine_similarity(query_embedding, chunk['embedding'])
-        ranked.append({"text": chunk['text'], "score": score})
-        
-    ranked.sort(key=lambda x: x['score'], reverse=True)
-    top_k = ranked[:4]
-    
-    return {"passages": [{"text": r['text'], "relevance": r['score']} for r in top_k]}
+
+    return {"passages": retrieve_top_k(query, CORPUS, k=4)}
+
+
+def execute_resume_search(query: str) -> Dict[str, Any]:
+    if not RESUME_CORPUS:
+        return {"passages": [], "error": "The resume corpus has not been generated yet."}
+
+    return {"passages": retrieve_top_k(query, RESUME_CORPUS, k=4)}
+
+
+def execute_lookup_booking(email: str = None, phone: str = None) -> Dict[str, Any]:
+    if not email and not phone:
+        return {"bookings": [], "error": "Provide an email or phone number to look up a booking."}
+
+    bookings = find_bookings(email=email, phone=phone)
+    return {"bookings": [b.model_dump(mode="json") for b in bookings]}
+
 
 import httpx
 
@@ -70,3 +70,16 @@ def execute_github_query(project: str) -> Dict[str, Any]:
         }
     except Exception as e:
         return {"error": str(e)}
+
+BEHAVIORAL_MIN_COSINE = 0.645
+
+def execute_behavioral_search(query: str) -> Dict[str, Any]:
+    if not BEHAVIORAL_CORPUS:
+        return {"passages": [], "error": "The behavioral corpus has not been generated yet."}
+    
+    passages = retrieve_top_k(query, BEHAVIORAL_CORPUS, k=2)
+    
+    if passages and passages[0].get("cosine_sim", 0) < BEHAVIORAL_MIN_COSINE:
+        return {"passages": [], "message": "nothing relevant"}
+        
+    return {"passages": passages}

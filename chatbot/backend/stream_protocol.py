@@ -4,8 +4,8 @@ from typing import Any, Dict, Optional
 def _sse(data: dict) -> str:
     return f"data: {json.dumps(data)}\n\n"
 
-def ui_text_delta(text: str) -> str:
-    return _sse({"type": "text-delta", "delta": text})
+def ui_text_delta(text: str, id: str = "msg_backend_response") -> str:
+    return _sse({"type": "text-delta", "id": id, "delta": text})
 
 def ui_tool_input_available(tool_call_id: str, tool_name: str, input_args: dict) -> str:
     return _sse({
@@ -19,7 +19,11 @@ def ui_tool_approval_request(tool_call_id: str, approval_id: str) -> str:
     return _sse({
         "type": "tool-approval-request",
         "approvalId": approval_id,
-        "toolCall": {"toolCallId": tool_call_id}
+        "toolCallId": tool_call_id,
+        "toolCall": {
+            "toolCallId": tool_call_id,
+            "toolName": "booking"
+        }
     })
 
 def ui_tool_output_available(tool_call_id: str, output: Any) -> str:
@@ -43,3 +47,12 @@ def ui_data_trace(tool_call_id: str, tool_name: str, label: str, status: str, de
         "id": tool_call_id,
         "data": data
     })
+
+def ui_text_start(id: str = "msg_backend_response") -> str:
+    return _sse({"type": "text-start", "id": id})
+    
+def ui_text_end(id: str = "msg_backend_response") -> str:
+    return _sse({"type": "text-end", "id": id})
+
+def ui_finish(reason: str = "stop") -> str:
+    return _sse({"type": "finish", "finishReason": reason})

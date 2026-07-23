@@ -7,6 +7,8 @@ import { profile } from '@/lib/resume-data';
 import type { ChatUIMessage, TraceStep } from '@/lib/types';
 import { TraceChip } from './TracePanel';
 import { BookingApprovalCard } from './BookingApprovalCard';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const GREETING: ChatUIMessage = {
   id: 'greeting',
@@ -14,18 +16,61 @@ const GREETING: ChatUIMessage = {
   parts: [
     {
       type: 'text',
-      text: `Hi, I'm ${profile.heroName}'s AI persona 👋 Ask me about my experience, skills, MPhil research, or projects. I can reply in whatever language you write in — English, Vietnamese, or otherwise.`,
+      text: `Hi, I’m ${profile.heroName}’s AI persona 👋 I’m a RAG-based generative chatbot built on Andrew’s embedded resume and relevant documents, designed to answer interview-style questions about his experience, skills, MPhil research, and projects. I run on a lean freemium stack — free hosting plus the start-up tier of Vertex AI — reflecting my engineering philosophy: rigorously optimising for the best price–performance. I can reply in whatever language you write in — English, Vietnamese, or otherwise.`,
     },
   ],
 };
 
-const SUGGESTIONS = [
+const SUGGESTIONS_POOL = [
   'What are your biggest achievements?',
   'What skills do you bring to a financial crime role?',
   'Tell me about your MPhil research',
   "What's Typology Extractor about?",
-  'Can we schedule a call?',
+  'Do you want to have a coffee chat?',
+  'Tell me a time when you led a project',
+  'How do you deal with incidents?',
+  'What did you do at Bendigo Bank?',
+  'What did you do at Remitano?',
+  'How do you use Agentic AI?',
+  'Can you explain your experience with BigQuery ML?',
 ];
+
+function getRelevantSuggestions(messages: ChatUIMessage[]): string[] {
+  if (messages.length <= 1) {
+    return [
+      'What are your biggest achievements?',
+      'What skills do you bring to a financial crime role?',
+      'Tell me about your MPhil research',
+      "What's Typology Extractor about?",
+      'Do you want to have a coffee chat?'
+    ];
+  }
+  
+  // Get all user messages text
+  const userTexts = messages
+    .filter(m => m.role === 'user')
+    .flatMap(m => m.parts.filter(p => p.type === 'text').map(p => (p as {text?: string}).text || ''))
+    .join(' ')
+    .toLowerCase();
+    
+  // Filter out suggestions the user has already asked about
+  const available = SUGGESTIONS_POOL.filter(s => !userTexts.includes(s.toLowerCase().replace('?', '')));
+  
+  // Always try to include the coffee chat if it hasn't been asked
+  const coffeeChat = 'Do you want to have a coffee chat?';
+  const hasCoffee = available.includes(coffeeChat);
+  const withoutCoffee = available.filter(s => s !== coffeeChat);
+  
+  // Shuffle and pick 3
+  const shuffled = withoutCoffee.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 3);
+  
+  if (hasCoffee) {
+    selected.push(coffeeChat);
+  }
+  
+  return selected;
+}
 
 function collectTraceSteps(message: ChatUIMessage): TraceStep[] {
   return message.parts
@@ -34,10 +79,14 @@ function collectTraceSteps(message: ChatUIMessage): TraceStep[] {
 }
 
 export function Chat() {
+  const [sessionId] = useState(() => Math.random().toString(36).substring(2, 15));
   const [input, setInput] = useState('');
-  const { messages, sendMessage, status, addToolApprovalResponse } = useChat<ChatUIMessage>({
+  const { messages, sendMessage, status, error, addToolApprovalResponse } = useChat<ChatUIMessage>({
     messages: [GREETING],
-    transport: new DefaultChatTransport({ api: process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api/chat' : '/api/chat' }),
+    transport: new DefaultChatTransport({ 
+      api: process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api/chat' : '/api/chat',
+      body: { sessionId }
+    }),
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
   });
 
@@ -73,9 +122,11 @@ export function Chat() {
                   <p className="mb-1 text-xs font-semibold text-ctp-mauve">🙂 {profile.heroName}</p>
                 )}
                 {textParts.map((p, i) => (
-                  <p key={i} className="whitespace-pre-wrap">
-                    {p.type === 'text' ? p.text : null}
-                  </p>
+                  <div key={i} className="prose prose-sm prose-invert max-w-none prose-p:leading-relaxed prose-pre:bg-ctp-surface0 prose-pre:text-ctp-text">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {p.type === 'text' ? p.text : ''}
+                    </ReactMarkdown>
+                  </div>
                 ))}
 
                 {bookingApprovals.map(part => (
@@ -106,21 +157,32 @@ export function Chat() {
             </div>
           </div>
         )}
+
+        {status === 'error' && (
+          <div className="flex justify-start" role="alert">
+            <div className="max-w-[85%] rounded-2xl border border-ctp-red/50 bg-ctp-mantle px-4 py-3 text-sm text-ctp-text">
+              <p className="mb-1 text-xs font-semibold text-ctp-red">🙂 {profile.heroName}</p>
+              Sorry, something went wrong{error?.message ? ` (${error.message})` : ''} — please try again.
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="flex flex-wrap gap-2 border-t border-ctp-surface0 py-3">
-        {SUGGESTIONS.map(s => (
-          <button
-            key={s}
-            type="button"
-            onClick={() => submit(s)}
-            disabled={status !== 'ready'}
-            className="rounded-full border border-ctp-surface1 px-3 py-1.5 text-xs text-ctp-subtext1 transition-colors hover:border-ctp-mauve hover:text-ctp-mauve disabled:opacity-50"
-          >
-            {s}
-          </button>
-        ))}
-      </div>
+      {status === 'ready' && (
+        <div className="flex flex-wrap gap-2 border-t border-ctp-surface0 py-3">
+          {getRelevantSuggestions(messages).map(s => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => submit(s)}
+              disabled={status !== 'ready'}
+              className="rounded-full border border-ctp-surface1 px-3 py-1.5 text-xs text-ctp-subtext1 transition-colors hover:border-ctp-mauve hover:text-ctp-mauve disabled:opacity-50"
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      )}
 
       <form
         onSubmit={e => {
